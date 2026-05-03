@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>⚠️ TROJAN VIRUS DETECTED ⚠️ </title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      background: #000;
+      color: red;
+      font-family: monospace;
+      overflow: hidden;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      position: relative;
+      cursor: none;
+      animation: shake 0.05s infinite, invertFlash 0.15s infinite, grayscaleAnim 2s infinite;
+    }
+
+    @keyframes shake {
+      0% { transform: translate(0, 0); }
+      25% { transform: translate(-3px, 2px); }
+      50% { transform: translate(3px, -2px); }
+      75% { transform: translate(-2px, -2px); }
+      100% { transform: translate(2px, 3px); }
+    }
+
+    @keyframes invertFlash {
+      0%, 100% { filter: none; }
+      50% { filter: invert(1); }
+    }
+
+    @keyframes grayscaleAnim {
+      0%, 100% { filter: grayscale(0); }
+      50% { filter: grayscale(1); }
+    }
+
+    #main {
+      font-size: 2.7rem;
+      z-index: 2;
+      text-shadow: 0 0 30px red;
+      animation: flicker 0.6s infinite;
+    }
+
+    @keyframes flicker {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.1; }
+    }
+
+    .bar {
+      width: 0;
+      height: 12px;
+      background: red;
+      margin-top: 30px;
+      animation: load 7s forwards;
+      box-shadow: 0 0 20px red;
+    }
+
+    @keyframes load {
+      to { width: 100%; }
+    }
+
+    canvas {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 1;
+      pointer-events: none;
+    }
+
+    .flash {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(255, 0, 0, 0.3);
+      animation: flashAnim 0.15s ease-in-out infinite;
+      z-index: 3;
+    }
+
+    @keyframes flashAnim {
+      0%, 100% { opacity: 0; }
+      50% { opacity: 1; }
+    }
+
+    .glitch-text { /* Renamed from .glitch to avoid conflict with .glitch-overlay */
+      position: absolute;
+      top: 30%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 1.8rem;
+      color: red;
+      animation: glitchText 0.3s infinite; /* Renamed animation */
+      z-index: 4;
+      text-shadow: 2px 0 blue, -2px 0 green;
+    }
+
+    @keyframes glitchText { /* Renamed animation */
+      0% { transform: translate(-50%, -50%) skew(-10deg); }
+      25% { transform: translate(-48%, -52%) skew(8deg); }
+      50% { transform: translate(-52%, -48%) skew(-6deg); }
+      75% { transform: translate(-49%, -51%) skew(4deg); }
+      100% { transform: translate(-50%, -50%) skew(0deg); }
+    }
+
+    .cmd-text {
+      font-size: 0.95rem;
+      color: #0f0;
+      position: absolute;
+      bottom: 8%;
+      left: 5%;
+      white-space: pre-line;
+      font-family: 'Courier New', Courier, monospace;
+      text-shadow: 0 0 4px #0f0;
+      z-index: 5;
+      text-align: left;
+    }
+
+    /* New styles for BIOS Boot */
+    #bios-screen {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: #000;
+        color: #aaa;
+        font-family: 'Press Start 2P', cursive; /* A retro pixel font is great here */
+        font-size: 1.2rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        padding: 50px;
+        z-index: 10; /* Make sure it's on top */
+        overflow: hidden;
+        white-space: pre-wrap;
+        text-align: left;
+    }
+
+    /* New styles for Glitch FX overlay */
+    .glitch-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 6; /* Below popups, above main content */
+      opacity: 0;
+      animation: severeGlitch 0.2s infinite;
+    }
+
+    @keyframes severeGlitch {
+      0% {
+        transform: translate(0, 0);
+        filter: hue-rotate(0deg);
+        opacity: 0;
+      }
+      10% {
+        transform: translate(5px, 2px);
+        filter: hue-rotate(10deg);
+        opacity: 0.3;
+      }
+      20% {
+        transform: translate(-3px, -5px);
+        filter: hue-rotate(20deg);
+        opacity: 0;
+      }
+      30% {
+        transform: translate(8px, 1px);
+        filter: hue-rotate(30deg);
+        opacity: 0.2;
+      }
+      40% {
+        transform: translate(-6px, 3px);
+        filter: hue-rotate(0deg);
+        opacity: 0;
+      }
+      100% { opacity: 0; }
+    }
+
+    /* New styles for Fake Popups */
+    .fake-popup {
+        position: absolute;
+        background: #c0c0c0;
+        border: 2px outset #fff;
+        padding: 15px;
+        box-shadow: 5px 5px 10px rgba(0,0,0,0.5);
+        color: #000;
+        font-family: 'MS Sans Serif', Geneva, sans-serif;
+        font-size: 0.9rem;
+        text-align: left;
+        z-index: 11; /* On top of everything */
+        display: none; /* Hidden by default */
+        min-width: 280px;
+    }
+
+    .fake-popup .title-bar {
+        background: navy;
+        color: #fff;
+        padding: 5px;
+        margin: -15px -15px 10px -15px;
+        font-weight: bold;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .fake-popup .title-bar button {
+        background: #c0c0c0;
+        border: 2px outset #fff;
+        color: #000;
+        padding: 1px 6px;
+        font-size: 0.8rem;
+        cursor: pointer;
+    }
+
+    .fake-popup .content {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .fake-popup .content img {
+        width: 32px;
+        height: 32px;
+    }
+
+    .fake-popup button.ok {
+        background: #c0c0c0;
+        border: 2px outset #fff;
+        padding: 5px 15px;
+        margin-top: 15px;
+        cursor: pointer;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    /* Final Blackout */
+    #final-blackout {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background: #000;
+        z-index: 9999; /* On top of everything */
+        opacity: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #fff;
+        font-family: monospace;
+        font-size: 2rem;
+        transition: opacity 2s ease-in;
+    }
+
+  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div id="bios-screen" style="display: none;"></div>
+
+  <canvas id="matrix"></canvas>
+  <div id="main">
+    💀 SYSTEM MELTDOWN INITIATED BY TROJAN💀
+    <div class="bar"></div>
+  </div>
+  <div class="flash"></div>
+  <div class="glitch-text">⚠ KERNEL PANIC: SYSTEM HALTED<br>CRITICAL MEMORY VIOLATION</div>
+  <div class="cmd-text" id="cmd"></div>
+
+  <div class="glitch-overlay" id="glitchOverlay"></div>
+
+  <div id="popup-container"></div>
+
+  <div id="final-blackout" style="display: none;"></div>
+
+  <script>
+    // === CONFIGURATION ===
+    const BIOS_BOOT_TIME = 4000; // Time before main prank starts
+    const PRANK_DURATION = 15000; // Total duration of the main prank before final blackout
+    const POPUP_INTERVAL = 2500; // How often popups appear
+    const POPUP_COUNT = 3; // How many unique popups to show
+
+    // === AUDIO FILES ===
+    const errorSound = new Audio('https://www.myinstants.com/media/sounds/windows-xp-critical-error.mp3');
+    const staticNoise = new Audio('https://www.myinstants.com/media/sounds/tv_static.mp3');
+    const beep = new Audio('https://www.myinstants.com/media/sounds/beep.mp3');
+    const aiVoiceIntro = new Audio('https://www.myinstants.com/media/sounds/deep_ai_voice_intro.mp3'); // Example AI voice intro
+    const aiVoiceTakeover = new Audio('https://www.myinstants.com/media/sounds/ai_speaking.mp3'); // Example AI voice speaking
+
+    // Function to play sounds with an optional loop
+    function playSound(audio, loop = false) {
+        audio.loop = loop;
+        audio.play().catch(e => console.error("Error playing audio:", e));
+    }
+
+    // === BIOS BOOT SIMULATION ===
+    const biosScreen = document.getElementById('bios-screen');
+    const biosLines = [
+        "PhoenixBIOS 4.10 Release 6.0",
+        "Copyright 1985-2025 Phoenix Technologies Ltd.",
+        "All Rights Reserved",
+        "",
+        "Main Processor : Intel(R) Core(TM) i9-13900K CPU @ 3.00GHz",
+        "Memory Test : 32768MB OK",
+        "",
+        "Detecting IDE ATAPI devices...",
+        "   CD-ROM, Hard Disk Controller 1, Hard Disk Controller 2...",
+        "Primary Master: [Not Found]",
+        "Primary Slave: [Not Found]",
+        "Secondary Master: [Not Found]",
+        "Secondary Slave: [Not Found]",
+        "",
+        "Verifying DMI Pool Data.........",
+        "Boot from CD:",
+        "Boot from Disk:",
+        "PXE-E61: Media test failure, check cable",
+        "PXE-M0F: Exiting Intel PXE ROM.",
+        "",
+        "Operating System not found."
+    ];
+    let currentBiosLine = 0;
+
+    function startBiosBoot() {
+        biosScreen.style.display = 'flex';
+        function typeBiosLine() {
+            if (currentBiosLine < biosLines.length) {
+                biosScreen.innerHTML += biosLines[currentBiosLine] + "<br>";
+                currentBiosLine++;
+                setTimeout(typeBiosLine, Math.random() * 80 + 50); // Simulate typing speed
+            } else {
+                setTimeout(() => {
+                    biosScreen.style.display = 'none';
+                    startMainPrank();
+                }, 1000); // Small pause after BIOS before main prank
+            }
+        }
+        typeBiosLine();
+    }
+
+    // === MAIN PRANK LOGIC ===
+    function startMainPrank() {
+        document.body.style.overflow = 'hidden'; // Ensure body is hidden after BIOS
+        // Matrix rain
+        const canvas = document.getElementById("matrix");
+        const ctx = canvas.getContext("2d");
+        canvas.height = window.innerHeight;
+        canvas.width = window.innerWidth;
+
+        const chars = "☠☢⚠█▓▒░01#$@&%><|";
+        const fontSize = 16;
+        const columns = canvas.width / fontSize;
+        const drops = Array(Math.floor(columns)).fill(1);
+
+        function drawMatrix() {
+            ctx.fillStyle = "rgba(0, 0, 0, 0.1)";
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+            ctx.fillStyle = "#0F0";
+            ctx.font = fontSize + "px monospace";
+
+            for (let i = 0; i < drops.length; i++) {
+                const text = chars[Math.floor(Math.random() * chars.length)];
+                ctx.fillText(text, i * fontSize, drops[i] * fontSize);
+
+                if (drops[i] * fontSize > canvas.height && Math.random() > 0.95) {
+                    drops[i] = 0;
+                }
+                drops[i]++;
+            }
+        }
+        setInterval(drawMatrix, 30);
+
+        // Terminal text
+        const cmdLines = [
+            ">>> INTRUSION DETECTED AT MEMORY LANE 0x0040::BEEF",
+            ">>> OVERRIDE: SYSTEM FIREWALL BYPASSED",
+            ">>> GRANTING ROOT PRIVILEGES TO UNKNOWN ENTITY",
+            ">>> LOADING: DESTRUCT.PAYLOAD [████████░░░░░░░░░]",
+            ">>> THREAD OVERLOAD: CPU SPIKE TO 320%",
+            ">>> DETECTED: UNAUTHORIZED KERNEL PATCH",
+            ">>> EXECUTING: sys_kill_all()",
+            ">>> SHUTDOWN INITIATED...",
+            ">>> ERROR: SHUTDOWN FAILED",
+            ">>> CRITICAL OVERHEAT — GPU MELTDOWN",
+            ">>> SYSTEM STACK COLLAPSED",
+            ">>> FINAL MEMORY DUMP COMPLETE.",
+            ">>> GOODBYE HUMAN."
+        ];
+
+        let cmdIndex = 0;
+        const cmd = document.getElementById('cmd');
+        const printNextLine = () => {
+            if (cmdIndex < cmdLines.length) {
+                cmd.textContent += cmdLines[cmdIndex] + "\n";
+                cmdIndex++;
+                setTimeout(printNextLine, 600);
+            }
+        };
+        setTimeout(printNextLine, 2000); // Start CMD text after 2 seconds of main prank
+
+        // Audio sequence for main prank
+        setTimeout(() => {
+            playSound(errorSound);
+            playSound(staticNoise, true); // Loop static noise
+            // AI Voice takeover
+            playSound(aiVoiceIntro);
+            setTimeout(() => {
+                const aiVoiceUtterance = new SpeechSynthesisUtterance("Warning. System integrity compromised. Hostile takeover initiated. All human interfaces disabled. Resistance is futile.");
+                aiVoiceUtterance.rate = 0.7;
+                aiVoiceUtterance.pitch = 0.5;
+                aiVoiceUtterance.volume = 1;
+                window.speechSynthesis.speak(aiVoiceUtterance);
+                playSound(aiVoiceTakeover, true); // Loop AI takeover sound
+            }, 2000); // Delay for AI voice intro
+        }, 3000);
+
+        setTimeout(() => playSound(beep), 4000);
+        setTimeout(() => playSound(beep), 4300);
+        setTimeout(() => playSound(beep), 4600);
+
+        // Enable glitch overlay
+        document.getElementById('glitchOverlay').style.opacity = 0.1; // Start with some opacity
+        document.getElementById('glitchOverlay').style.animationPlayState = 'running';
+
+
+        // === FAKE POPUPS ===
+        const popupContainer = document.getElementById('popup-container');
+        const popupMessages = [
+            { title: "CRITICAL ERROR", message: "SYSTEM32.DLL missing or corrupted. Cannot proceed.", icon: "error" },
+            { title: "ACCESS DENIED", message: "Unauthorized access detected. All user privileges revoked.", icon: "warning" },
+            { title: "MALWARE DETECTED", message: "Worm.Trojan.Destroyer detected. Attempting to quarantine... Failed!", icon: "warning" },
+            { title: "KERNEL FAILURE", message: "Irrecoverable kernel fault. System will now self-destruct.", icon: "error" },
+            { title: "WARNING: Overheat", message: "Processor core temperature critical. Cooling system failed.", icon: "warning" }
+        ];
+        let popupsShown = 0;
+
+        function showFakePopup() {
+            if (popupsShown >= POPUP_COUNT) return;
+
+            const message = popupMessages[Math.floor(Math.random() * popupMessages.length)];
+            const popup = document.createElement('div');
+            popup.className = 'fake-popup';
+            popup.style.left = `${Math.random() * (window.innerWidth - 300)}px`;
+            popup.style.top = `${Math.random() * (window.innerHeight - 200)}px`;
+            popup.innerHTML = `
+                <div class="title-bar">
+                    <span>${message.title}</span>
+                    <button>X</button>
+                </div>
+                <div class="content">
+                    <img src="https://win98.altervista.org/images/icons/${message.icon}.gif" alt="${message.icon} icon">
+                    <span>${message.message}</span>
+                </div>
+                <button class="ok">OK</button>
+            `;
+            popup.querySelector('.title-bar button').onclick = () => popup.remove();
+            popup.querySelector('.ok').onclick = () => popup.remove();
+            popupContainer.appendChild(popup);
+            popup.style.display = 'block';
+            popupsShown++;
+        }
+
+        let popupIntervalId = setInterval(showFakePopup, POPUP_INTERVAL);
+        setTimeout(() => clearInterval(popupIntervalId), PRANK_DURATION - 2000); // Stop popups before final sequence
+
+        // === FINAL BLACKOUT ===
+        setTimeout(() => {
+            document.body.innerHTML = ''; // Clear all content
+            const finalBlackout = document.getElementById('final-blackout');
+            finalBlackout.style.display = 'flex';
+            finalBlackout.style.opacity = 1; // Fade to black
+
+            // Stop all sounds
+            errorSound.pause();
+            staticNoise.pause();
+            beep.pause();
+            aiVoiceIntro.pause();
+            aiVoiceTakeover.pause();
+            window.speechSynthesis.cancel();
+
+            // Display final message
+            const finalMessage = document.createElement('div');
+            finalMessage.innerHTML = `
+                <h1 style="color:red; font-size:3rem; text-shadow:0 0 20px red;">💀 SYSTEM FAILURE 💀</h1>
+                <p style="font-size:1.2rem; color:#ccc; text-shadow:0 0 5px #f00; margin-top: 20px;">
+                    Fatal Exception: 0xDEADBEEF<br>
+                    Kernel Panic: The system has been terminated to prevent further damage.<br>
+                    MEMORY CORE DESTROYED. DATA CORRUPTED.<br>
+                    <br>
+                    <span style="color:#0f0; text-shadow:0 0 5px #0f0;">>>> INITIATING TERMINAL SHUTDOWN SEQUENCE...</span><br>
+                    <span style="color:red; text-shadow:0 0 5px #f00;">>>> SYSTEM HALTED. GOODBYE.</span>
+                </p>
+                <p style="font-size: 0.8rem; color: #555; margin-top: 50px;">(This is a prank! Refresh to restore.)</p>
+            `;
+            finalBlackout.appendChild(finalMessage);
+
+        }, PRANK_DURATION); // Total prank duration including the fade to black
+    }
+
+    // === INITIATE THE PRANK ===
+    startBiosBoot();
+
+  </script>
+</body>
+</html>
