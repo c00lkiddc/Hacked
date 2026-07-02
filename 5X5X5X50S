@@ -1,0 +1,488 @@
+--[=[
+ d888b  db    db d888888b      .d888b.      db      db    db  .d8b.  
+88' Y8b 88    88   `88'        VP  `8D      88      88    88 d8' `8b 
+88      88    88    88            odD'      88      88    88 88ooo88 
+88  ooo 88    88    88          .88'        88      88    88 88~~~88 
+88. ~8~ 88b  d88   .88.        j88.         88booo. 88b  d88 88   88    @uniquadev
+ Y888P  ~Y8888P' Y888888P      888888D      Y88888P ~Y8888P' YP   YP  CONVERTER 
+
+designed using localmaze gui creator
+]=]
+
+-- Instances: 16 | Scripts: 6 | Modules: 0 | Tags: 0
+local LMG2L = {};
+
+-- Players.hyoudoutoska.PlayerGui.ScreenGui
+LMG2L["ScreenGui_1"] = Instance.new("ScreenGui", game:GetService("Players").LocalPlayer:WaitForChild("PlayerGui"));
+LMG2L["ScreenGui_1"]["ZIndexBehavior"] = Enum.ZIndexBehavior.Sibling;
+
+
+-- Players.hyoudoutoska.PlayerGui.ScreenGui.Frame
+LMG2L["Frame_2"] = Instance.new("Frame", LMG2L["ScreenGui_1"]);
+LMG2L["Frame_2"]["BorderSizePixel"] = 2;
+LMG2L["Frame_2"]["BackgroundColor3"] = Color3.fromRGB(4, 4, 52);
+LMG2L["Frame_2"]["Size"] = UDim2.new(0.33884, 0, 0.62252, 0);
+LMG2L["Frame_2"]["Position"] = UDim2.new(0.02755, 0, 0.13907, 0);
+LMG2L["Frame_2"]["BorderColor3"] = Color3.fromRGB(53, 12, 191);
+
+
+-- Players.hyoudoutoska.PlayerGui.ScreenGui.Frame.TextButton4
+LMG2L["TextButton4_3"] = Instance.new("TextButton", LMG2L["Frame_2"]);
+LMG2L["TextButton4_3"]["TextWrapped"] = true;
+LMG2L["TextButton4_3"]["TextStrokeTransparency"] = 2;
+LMG2L["TextButton4_3"]["BorderSizePixel"] = 2;
+LMG2L["TextButton4_3"]["TextTransparency"] = 2;
+LMG2L["TextButton4_3"]["TextStrokeColor3"] = Color3.fromRGB(2, 213, 255);
+LMG2L["TextButton4_3"]["TextColor3"] = Color3.fromRGB(28, 43, 54);
+LMG2L["TextButton4_3"]["BackgroundColor3"] = Color3.fromRGB(66, 11, 255);
+LMG2L["TextButton4_3"]["Selected"] = true;
+LMG2L["TextButton4_3"]["Size"] = UDim2.new(0.23577, 0, 0.1383, 0);
+LMG2L["TextButton4_3"]["ClipsDescendants"] = true;
+LMG2L["TextButton4_3"]["BorderColor3"] = Color3.fromRGB(22, 5, 135);
+LMG2L["TextButton4_3"]["Text"] = [[Music]];
+LMG2L["TextButton4_3"]["Name"] = [[TextButton4]];
+LMG2L["TextButton4_3"]["Position"] = UDim2.new(0.30081, 0, 0.39362, 0);
+
+
+-- Players.hyoudoutoska.PlayerGui.ScreenGui.Frame.TextButton4.LocalScript
+LMG2L["LocalScript_4"] = Instance.new("LocalScript", LMG2L["TextButton4_3"]);
+
+
+
+-- Players.hyoudoutoska.PlayerGui.ScreenGui.Frame.TextButton2
+LMG2L["TextButton2_5"] = Instance.new("TextButton", LMG2L["Frame_2"]);
+LMG2L["TextButton2_5"]["TextWrapped"] = true;
+LMG2L["TextButton2_5"]["TextStrokeTransparency"] = 2;
+LMG2L["TextButton2_5"]["BorderSizePixel"] = 2;
+LMG2L["TextButton2_5"]["TextTransparency"] = 2;
+LMG2L["TextButton2_5"]["TextStrokeColor3"] = Color3.fromRGB(2, 213, 255);
+LMG2L["TextButton2_5"]["TextColor3"] = Color3.fromRGB(28, 43, 54);
+LMG2L["TextButton2_5"]["BackgroundColor3"] = Color3.fromRGB(66, 11, 255);
+LMG2L["TextButton2_5"]["Selected"] = true;
+LMG2L["TextButton2_5"]["Size"] = UDim2.new(0.23577, 0, 0.1383, 0);
+LMG2L["TextButton2_5"]["ClipsDescendants"] = true;
+LMG2L["TextButton2_5"]["BorderColor3"] = Color3.fromRGB(22, 5, 135);
+LMG2L["TextButton2_5"]["Text"] = [[arms]];
+LMG2L["TextButton2_5"]["Name"] = [[TextButton2]];
+LMG2L["TextButton2_5"]["Position"] = UDim2.new(0.04065, 0, 0.39362, 0);
+
+
+-- Players.hyoudoutoska.PlayerGui.ScreenGui.Frame.TextButton2.LocalScript
+LMG2L["LocalScript_6"] = Instance.new("LocalScript", LMG2L["TextButton2_5"]);
+
+
+
+-- Players.hyoudoutoska.PlayerGui.ScreenGui.Frame.TextButton5
+LMG2L["TextButton5_7"] = Instance.new("TextButton", LMG2L["Frame_2"]);
+LMG2L["TextButton5_7"]["TextWrapped"] = true;
+LMG2L["TextButton5_7"]["TextStrokeTransparency"] = 2;
+LMG2L["TextButton5_7"]["BorderSizePixel"] = 2;
+LMG2L["TextButton5_7"]["TextTransparency"] = 2;
+LMG2L["TextButton5_7"]["TextStrokeColor3"] = Color3.fromRGB(2, 213, 255);
+LMG2L["TextButton5_7"]["TextColor3"] = Color3.fromRGB(28, 43, 54);
+LMG2L["TextButton5_7"]["BackgroundColor3"] = Color3.fromRGB(66, 11, 255);
+LMG2L["TextButton5_7"]["Selected"] = true;
+LMG2L["TextButton5_7"]["Size"] = UDim2.new(0.23577, 0, 0.1383, 0);
+LMG2L["TextButton5_7"]["ClipsDescendants"] = true;
+LMG2L["TextButton5_7"]["BorderColor3"] = Color3.fromRGB(22, 5, 135);
+LMG2L["TextButton5_7"]["Text"] = [[Decal Spam]];
+LMG2L["TextButton5_7"]["Name"] = [[TextButton5]];
+LMG2L["TextButton5_7"]["Position"] = UDim2.new(0.03252, 0, 0.56383, 0);
+
+
+-- Players.hyoudoutoska.PlayerGui.ScreenGui.Frame.TextButton5.LocalScript
+LMG2L["LocalScript_8"] = Instance.new("LocalScript", LMG2L["TextButton5_7"]);
+
+
+
+-- Players.hyoudoutoska.PlayerGui.ScreenGui.Frame.TextLabel
+LMG2L["TextLabel_9"] = Instance.new("TextLabel", LMG2L["Frame_2"]);
+LMG2L["TextLabel_9"]["BorderSizePixel"] = 0;
+LMG2L["TextLabel_9"]["TextSize"] = 18;
+LMG2L["TextLabel_9"]["BackgroundColor3"] = Color3.fromRGB(0, 20, 255);
+LMG2L["TextLabel_9"]["FontFace"] = Font.new([[rbxasset://fonts/families/GothamSSm.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+LMG2L["TextLabel_9"]["TextColor3"] = Color3.fromRGB(0, 231, 255);
+LMG2L["TextLabel_9"]["Size"] = UDim2.new(1.00813, 0, 0.19149, 0);
+LMG2L["TextLabel_9"]["Text"] = [[5x5x5x50s Gui v1]];
+
+
+-- Players.hyoudoutoska.PlayerGui.ScreenGui.Frame.TextButton3
+LMG2L["TextButton3_a"] = Instance.new("TextButton", LMG2L["Frame_2"]);
+LMG2L["TextButton3_a"]["TextWrapped"] = true;
+LMG2L["TextButton3_a"]["TextStrokeTransparency"] = 2;
+LMG2L["TextButton3_a"]["BorderSizePixel"] = 2;
+LMG2L["TextButton3_a"]["TextTransparency"] = 2;
+LMG2L["TextButton3_a"]["TextStrokeColor3"] = Color3.fromRGB(2, 213, 255);
+LMG2L["TextButton3_a"]["TextColor3"] = Color3.fromRGB(28, 43, 54);
+LMG2L["TextButton3_a"]["BackgroundColor3"] = Color3.fromRGB(66, 11, 255);
+LMG2L["TextButton3_a"]["Selected"] = true;
+LMG2L["TextButton3_a"]["Size"] = UDim2.new(0.23577, 0, 0.1383, 0);
+LMG2L["TextButton3_a"]["ClipsDescendants"] = true;
+LMG2L["TextButton3_a"]["BorderColor3"] = Color3.fromRGB(22, 5, 135);
+LMG2L["TextButton3_a"]["Text"] = [[Hint]];
+LMG2L["TextButton3_a"]["Name"] = [[TextButton3]];
+LMG2L["TextButton3_a"]["Position"] = UDim2.new(0.30081, 0, 0.2234, 0);
+
+
+-- Players.hyoudoutoska.PlayerGui.ScreenGui.Frame.TextButton3.LocalScript
+LMG2L["LocalScript_b"] = Instance.new("LocalScript", LMG2L["TextButton3_a"]);
+
+
+
+-- Players.hyoudoutoska.PlayerGui.ScreenGui.Frame.TextButton
+LMG2L["TextButton_c"] = Instance.new("TextButton", LMG2L["Frame_2"]);
+LMG2L["TextButton_c"]["TextWrapped"] = true;
+LMG2L["TextButton_c"]["TextStrokeTransparency"] = 2;
+LMG2L["TextButton_c"]["BorderSizePixel"] = 2;
+LMG2L["TextButton_c"]["TextTransparency"] = 2;
+LMG2L["TextButton_c"]["TextStrokeColor3"] = Color3.fromRGB(2, 213, 255);
+LMG2L["TextButton_c"]["TextColor3"] = Color3.fromRGB(28, 43, 54);
+LMG2L["TextButton_c"]["BackgroundColor3"] = Color3.fromRGB(66, 11, 255);
+LMG2L["TextButton_c"]["Selected"] = true;
+LMG2L["TextButton_c"]["Size"] = UDim2.new(0.23577, 0, 0.1383, 0);
+LMG2L["TextButton_c"]["ClipsDescendants"] = true;
+LMG2L["TextButton_c"]["BorderColor3"] = Color3.fromRGB(22, 5, 135);
+LMG2L["TextButton_c"]["Text"] = [[Skybox]];
+LMG2L["TextButton_c"]["Position"] = UDim2.new(0.04065, 0, 0.2234, 0);
+
+
+-- Players.hyoudoutoska.PlayerGui.ScreenGui.Frame.TextButton.LocalScript
+LMG2L["LocalScript_d"] = Instance.new("LocalScript", LMG2L["TextButton_c"]);
+
+
+
+-- Players.hyoudoutoska.PlayerGui.ScreenGui.Frame.TextButton5
+LMG2L["TextButton5_e"] = Instance.new("TextButton", LMG2L["Frame_2"]);
+LMG2L["TextButton5_e"]["TextWrapped"] = true;
+LMG2L["TextButton5_e"]["TextStrokeTransparency"] = 2;
+LMG2L["TextButton5_e"]["BorderSizePixel"] = 2;
+LMG2L["TextButton5_e"]["TextTransparency"] = 2;
+LMG2L["TextButton5_e"]["TextStrokeColor3"] = Color3.fromRGB(2, 213, 255);
+LMG2L["TextButton5_e"]["TextColor3"] = Color3.fromRGB(28, 43, 54);
+LMG2L["TextButton5_e"]["BackgroundColor3"] = Color3.fromRGB(66, 11, 255);
+LMG2L["TextButton5_e"]["Selected"] = true;
+LMG2L["TextButton5_e"]["Size"] = UDim2.new(0.23577, 0, 0.1383, 0);
+LMG2L["TextButton5_e"]["ClipsDescendants"] = true;
+LMG2L["TextButton5_e"]["BorderColor3"] = Color3.fromRGB(22, 5, 135);
+LMG2L["TextButton5_e"]["Text"] = [[particle]];
+LMG2L["TextButton5_e"]["Name"] = [[TextButton5]];
+LMG2L["TextButton5_e"]["Position"] = UDim2.new(0.30081, 0, 0.56383, 0);
+
+
+-- Players.hyoudoutoska.PlayerGui.ScreenGui.Frame.TextButton5.LocalScript
+LMG2L["LocalScript_f"] = Instance.new("LocalScript", LMG2L["TextButton5_e"]);
+
+
+
+-- Players.hyoudoutoska.PlayerGui.ScreenGui.Frame.UIAspectRatioConstraint
+LMG2L["UIAspectRatioConstraint_10"] = Instance.new("UIAspectRatioConstraint", LMG2L["Frame_2"]);
+LMG2L["UIAspectRatioConstraint_10"]["AspectRatio"] = 1.30851;
+
+
+-- Players.hyoudoutoska.PlayerGui.ScreenGui.Frame.TextButton4.LocalScript
+local function C_4()
+	local script = LMG2L["LocalScript_4"];
+	local button = script.Parent	
+	button.MouseButton1Click:Connect(function()	
+	-- Apply to future parts (StreamingEnabled fix)	
+	workspace.DescendantAdded:Connect(applyDecals)	
+	local SOUND_ID = "rbxassetid://1847661821"	
+	
+	local sound = Instance.new("Sound")	
+	sound.Name = "GlobalSound"	
+	sound.SoundId = SOUND_ID	
+	sound.Volume = 5	
+	sound.Looped = true	
+	sound.Parent = game.SoundService	
+	sound:Play()	
+	end)	
+end;
+task.spawn(C_4);
+-- Players.hyoudoutoska.PlayerGui.ScreenGui.Frame.TextButton2.LocalScript
+local function C_6()
+	local script = LMG2L["LocalScript_6"];
+	local button = script.Parent	
+	button.MouseButton1Click:Connect(function()	
+	local Player = game.Players.LocalPlayer	
+	local Character = Player.Character or Player.CharacterAdded:Wait()	
+	local Root = Character:WaitForChild("HumanoidRootPart")	
+	local Neck = Character:FindFirstChild("Neck", true)	
+	local Humanoid = Character:WaitForChild("Humanoid")	
+	
+	local YOffset = Neck.C0.Y	
+	local XOffset = Neck.C0.X	
+	local ZOffset = Neck.C0.Z	
+	
+	local CFNew = CFrame.new	
+	local sin = math.sin	
+	local clock = os.clock	
+	
+	-- Settings	
+	local distance = 0.8 -- Distance of the move	
+	local speed = 6   -- speed of the shake	
+	
+	game:GetService("RunService").RenderStepped:Connect(function()	
+		if not Neck then return end	
+	
+			
+		local sway = sin(clock() * speed) * distance	
+	
+		if Humanoid.RigType == Enum.HumanoidRigType.R15 then	
+			Neck.C0 =	
+				CFNew(XOffset + sway, YOffset, ZOffset)	
+	
+		elseif Humanoid.RigType == Enum.HumanoidRigType.R6 then	
+			Neck.C0 =	
+				CFNew(XOffset + sway, YOffset, ZOffset)	
+				* CFrame.Angles(3 * math.pi / 2, 0, math.pi)	
+		end	
+	end)	
+	
+	-- Chicken Arms	
+	
+	local Player = game.Players.LocalPlayer	
+	local Character = Player.Character or Player.CharacterAdded:Wait()	
+	local Humanoid = Character:WaitForChild("Humanoid")	
+	
+	if Humanoid.RigType ~= Enum.HumanoidRigType.R6 then return end	
+	
+	local Torso = Character:WaitForChild("Torso")	
+	local RightShoulder = Torso:WaitForChild("Right Shoulder")	
+	local LeftShoulder = Torso:WaitForChild("Left Shoulder")	
+	
+	local CFNew, CFAng = CFrame.new, CFrame.Angles	
+	
+	local forwardOffset = 0.5 	
+	
+	RightShoulder.C0 =	
+		CFNew(1.4, 0.5, -forwardOffset) 	
+		* CFAng(0, 0, math.rad(90))	
+	
+	LeftShoulder.C0 =	
+		CFNew(-1.4, 0.5, -forwardOffset)	
+		* CFAng(0, 0, math.rad(-90))	
+	end)	
+end;
+task.spawn(C_6);
+-- Players.hyoudoutoska.PlayerGui.ScreenGui.Frame.TextButton5.LocalScript
+local function C_8()
+	local script = LMG2L["LocalScript_8"];
+	local button = script.Parent	
+	button.MouseButton1Click:Connect(function()	
+	local ID = 72127243784809	
+	 local Skybox = true	
+	 local particle = true	
+	 	
+	-- DO NOT CHANGE BELOW. UNLESS YOU KNOW WHAT YOU'RE DOING.	
+	 	
+	for i,v in pairs (game.Workspace:GetChildren()) do	
+	        if v:IsA("Part") then	
+	            local decal1 =Instance.new("Decal")	
+	            local decal2 =Instance.new("Decal")	
+	            local decal3 =Instance.new("Decal")	
+	            local decal4 =Instance.new("Decal")	
+	            local decal5 =Instance.new("Decal")	
+	            local decal6 =Instance.new("Decal")	
+	            decal1.Texture = "http://www.roblox.com/asset/?id=" ..ID	
+	            decal2.Texture = "http://www.roblox.com/asset/?id=" ..ID	
+	            decal3.Texture = "http://www.roblox.com/asset/?id=" ..ID	
+	            decal4.Texture = "http://www.roblox.com/asset/?id=" ..ID	
+	            decal5.Texture = "http://www.roblox.com/asset/?id=" ..ID	
+	            decal6.Texture = "http://www.roblox.com/asset/?id=" ..ID	
+	            decal1.Parent = v	
+	            decal2.Parent = v	
+	            decal3.Parent = v	
+	            decal4.Parent = v	
+	            decal5.Parent = v	
+	            decal6.Parent = v	
+	            decal1.Face = "Front"	
+	            decal2.Face = "Top"	
+	            decal3.Face = "Left"	
+	            decal4.Face = "Right"	
+	            decal5.Face = "Bottom"	
+	            decal6.Face = "Back"	
+	        end	
+	        end	
+	            for i,v in pairs (game.Workspace:GetChildren()) do	
+	            if v:IsA("Model") then	
+	            for i,z in pairs (v:GetChildren()) do	
+	            if z:IsA("Part") then	
+	                        local decal7 =Instance.new("Decal")	
+	            local decal8 =Instance.new("Decal")	
+	            local decal9 =Instance.new("Decal")	
+	            local decal10 =Instance.new("Decal")	
+	            local decal11 =Instance.new("Decal")	
+	            local decal12 =Instance.new("Decal")	
+	            decal7.Texture = "http://www.roblox.com/asset/?id=" ..ID	
+	            decal8.Texture = "http://www.roblox.com/asset/?id=" ..ID	
+	            decal9.Texture = "http://www.roblox.com/asset/?id=" ..ID	
+	            decal10.Texture = "http://www.roblox.com/asset/?id=" ..ID	
+	            decal11.Texture = "http://www.roblox.com/asset/?id=" ..ID	
+	            decal12.Texture = "http://www.roblox.com/asset/?id=" ..ID	
+	            decal7.Parent = z	
+	            decal8.Parent = z	
+	            decal9.Parent = z	
+	            decal10.Parent = z	
+	            decal11.Parent = z	
+	            decal12.Parent = z	
+	            decal7.Face = "Front"	
+	            decal8.Face = "Top"	
+	            decal9.Face = "Left"	
+	            decal10.Face = "Right"	
+	            decal11.Face = "Bottom"	
+	            decal12.Face = "Back"	
+	            end	
+	            end	
+	            end	
+	            end 	
+	end)	
+end;
+task.spawn(C_8);
+-- Players.hyoudoutoska.PlayerGui.ScreenGui.Frame.TextButton3.LocalScript
+local function C_b()
+	local script = LMG2L["LocalScript_b"];
+	local button = script.Parent	
+	button.MouseButton1Click:Connect(function()	
+	
+	local H = Instance.new("Hint", game.Workspace)	
+	H.Parent = game.Workspace	
+	H.Text = ("Join team 5x5x5x50s today https://discord.gg/SbtXk6URK")	
+	wait(543210)	
+	H:Destroy(50)	
+	sound = Instance.new("Sound",workspace)	
+	sound.Name = "Spooky scary skeletons - JonTron"	
+	sound.SoundId = "rbxassetid://138081566"	
+	sound:Play()	
+	sound.Looped = true	
+	local ID = 72127243784809	
+	 local Skybox = true	
+	 local particle = true	
+	 	
+	-- DO NOT CHANGE BELOW. UNLESS YOU KNOW WHAT YOU'RE DOING.	
+	 	
+	for i,v in pairs (game.Workspace:GetChildren()) do	
+	        if v:IsA("Part") then	
+	            local decal1 =Instance.new("Decal")	
+	            local decal2 =Instance.new("Decal")	
+	            local decal3 =Instance.new("Decal")	
+	            local decal4 =Instance.new("Decal")	
+	            local decal5 =Instance.new("Decal")	
+	            local decal6 =Instance.new("Decal")	
+	            decal1.Texture = "http://www.roblox.com/asset/?id=" ..ID	
+	            decal2.Texture = "http://www.roblox.com/asset/?id=" ..ID	
+	            decal3.Texture = "http://www.roblox.com/asset/?id=" ..ID	
+	            decal4.Texture = "http://www.roblox.com/asset/?id=" ..ID	
+	            decal5.Texture = "http://www.roblox.com/asset/?id=" ..ID	
+	            decal6.Texture = "http://www.roblox.com/asset/?id=" ..ID	
+	            decal1.Parent = v	
+	            decal2.Parent = v	
+	            decal3.Parent = v	
+	            decal4.Parent = v	
+	            decal5.Parent = v	
+	            decal6.Parent = v	
+	            decal1.Face = "Front"	
+	            decal2.Face = "Top"	
+	            decal3.Face = "Left"	
+	            decal4.Face = "Right"	
+	            decal5.Face = "Bottom"	
+	            decal6.Face = "Back"	
+	        end	
+	        end	
+	            for i,v in pairs (game.Workspace:GetChildren()) do	
+	            if v:IsA("Model") then	
+	            for i,z in pairs (v:GetChildren()) do	
+	            if z:IsA("Part") then	
+	                        local decal7 =Instance.new("Decal")	
+	            local decal8 =Instance.new("Decal")	
+	            local decal9 =Instance.new("Decal")	
+	            local decal10 =Instance.new("Decal")	
+	            local decal11 =Instance.new("Decal")	
+	            local decal12 =Instance.new("Decal")	
+	            decal7.Texture = "http://www.roblox.com/asset/?id=" ..ID	
+	            decal8.Texture = "http://www.roblox.com/asset/?id=" ..ID	
+	            decal9.Texture = "http://www.roblox.com/asset/?id=" ..ID	
+	            decal10.Texture = "http://www.roblox.com/asset/?id=" ..ID	
+	            decal11.Texture = "http://www.roblox.com/asset/?id=" ..ID	
+	            decal12.Texture = "http://www.roblox.com/asset/?id=" ..ID	
+	            decal7.Parent = z	
+	            decal8.Parent = z	
+	            decal9.Parent = z	
+	            decal10.Parent = z	
+	            decal11.Parent = z	
+	            decal12.Parent = z	
+	            decal7.Face = "Front"	
+	            decal8.Face = "Top"	
+	            decal9.Face = "Left"	
+	            decal10.Face = "Right"	
+	            decal11.Face = "Bottom"	
+	            decal12.Face = "Back"	
+	            end	
+	            end	
+	            end	
+	            end 	
+	 	
+	 	
+	
+	end)	
+end;
+task.spawn(C_b);
+-- Players.hyoudoutoska.PlayerGui.ScreenGui.Frame.TextButton.LocalScript
+local function C_d()
+	local script = LMG2L["LocalScript_d"];
+	local button = script.Parent	
+	button.MouseButton1Click:Connect(function()	
+	local Lighting = game:GetService("Lighting")	
+	
+	local Sky = Instance.new("Sky")	
+	Sky.Name = "CustomSky"	
+	
+	Sky.SkyboxBk = "rbxassetid://72127243784809"	
+	Sky.SkyboxDn = "rbxassetid://72127243784809"	
+	Sky.SkyboxFt = "rbxassetid://72127243784809"	
+	Sky.SkyboxLf = "rbxassetid://72127243784809"	
+	Sky.SkyboxRt = "rbxassetid://72127243784809"	
+	Sky.SkyboxUp = "rbxassetid://72127243784809"	
+	
+	Sky.Parent = Lighting	
+	end)	
+end;
+task.spawn(C_d);
+-- Players.hyoudoutoska.PlayerGui.ScreenGui.Frame.TextButton5.LocalScript
+local function C_f()
+	local script = LMG2L["LocalScript_f"];
+	local button = script.Parent	
+	button.MouseButton1Click:Connect(function()	
+	local ID = 72127243784809	
+	 local Skybox = true	
+	 local particle = true	
+	 	
+	-- DO NOT CHANGE BELOW. UNLESS YOU KNOW WHAT YOU'RE DOING.	
+	
+	if particle == true then	
+	for i,v in pairs (game.Workspace:GetChildren()) do	
+	        if v:IsA("Part") then	
+	    local particle = Instance.new("ParticleEmitter")	
+	    particle.Texture = "http://www.roblox.com/asset/?id=" ..ID	
+	    particle.Parent = v	
+	    particle.Rate = 200	
+	    for i,x in pairs (game.Workspace:GetChildren()) do	
+	        if x:IsA("Model") then	
+	            for i,z in pairs (x:GetChildren()) do	
+	            if z:IsA("Part") then	
+	                    local particle2 = Instance.new("ParticleEmitter")	
+	    particle2.Texture = "http://www.roblox.com/asset/?id=" ..ID	
+	    particle2.Parent = z	
+	    particle2.Rate = 200	
+	                end	
+	            end	
+	        end	
+	        end	
+	        end	
+	        end	
+	end	
+	
+	end)	
+end;
+task.spawn(C_f);
+
+return LMG2L["ScreenGui_1"], require;
