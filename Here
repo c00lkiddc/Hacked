@@ -1,0 +1,1456 @@
+--[=[
+ d888b  db    db d888888b      .d888b.      db      db    db  .d8b.  
+88' Y8b 88    88   `88'        VP  `8D      88      88    88 d8' `8b 
+88      88    88    88            odD'      88      88    88 88ooo88 
+88  ooo 88    88    88          .88'        88      88    88 88~~~88 
+88. ~8~ 88b  d88   .88.        j88.         88booo. 88b  d88 88   88    @uniquadev
+ Y888P  ~Y8888P' Y888888P      888888D      Y88888P ~Y8888P' YP   YP  CONVERTER 
+
+designed using localmaze gui creator
+]=]
+
+-- Instances: 32 | Scripts: 15 | Modules: 0 | Tags: 0
+local LMG2L = {};
+
+-- Players.hyoudoutoska.PlayerGui.ScreenGui
+LMG2L["ScreenGui_1"] = Instance.new("ScreenGui", game:GetService("Players").LocalPlayer:WaitForChild("PlayerGui"));
+LMG2L["ScreenGui_1"]["ZIndexBehavior"] = Enum.ZIndexBehavior.Sibling;
+
+
+-- Players.hyoudoutoska.PlayerGui.ScreenGui.ScrollingFrame
+LMG2L["ScrollingFrame_2"] = Instance.new("ScrollingFrame", LMG2L["ScreenGui_1"]);
+LMG2L["ScrollingFrame_2"]["ScrollingDirection"] = Enum.ScrollingDirection.Y;
+LMG2L["ScrollingFrame_2"]["BorderSizePixel"] = 0;
+LMG2L["ScrollingFrame_2"]["TopImage"] = [[99616556437616]];
+LMG2L["ScrollingFrame_2"]["VerticalScrollBarInset"] = Enum.ScrollBarInset.Always;
+LMG2L["ScrollingFrame_2"]["BackgroundColor3"] = Color3.fromRGB(11, 53, 0);
+LMG2L["ScrollingFrame_2"]["ScrollBarImageTransparency"] = 0.5;
+LMG2L["ScrollingFrame_2"]["HorizontalScrollBarInset"] = Enum.ScrollBarInset.ScrollBar;
+LMG2L["ScrollingFrame_2"]["Size"] = UDim2.new(0, 230, 0, 176);
+LMG2L["ScrollingFrame_2"]["ScrollBarImageColor3"] = Color3.fromRGB(109, 109, 109);
+LMG2L["ScrollingFrame_2"]["Position"] = UDim2.new(0, 32, 0, 60);
+LMG2L["ScrollingFrame_2"]["ScrollBarThickness"] = 5;
+
+
+-- Players.hyoudoutoska.PlayerGui.ScreenGui.ScrollingFrame.spam
+LMG2L["spam_3"] = Instance.new("TextButton", LMG2L["ScrollingFrame_2"]);
+LMG2L["spam_3"]["TextStrokeTransparency"] = 5;
+LMG2L["spam_3"]["TextStrokeColor3"] = Color3.fromRGB(50, 255, 8);
+LMG2L["spam_3"]["TextSize"] = 9;
+LMG2L["spam_3"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+LMG2L["spam_3"]["BackgroundColor3"] = Color3.fromRGB(2, 186, 0);
+LMG2L["spam_3"]["FontFace"] = Font.new([[rbxasset://fonts/families/GothamSSm.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+LMG2L["spam_3"]["Size"] = UDim2.new(0, 64, 0, 34);
+LMG2L["spam_3"]["BorderColor3"] = Color3.fromRGB(13, 187, 0);
+LMG2L["spam_3"]["Text"] = [[spam chat]];
+LMG2L["spam_3"]["Name"] = [[spam]];
+LMG2L["spam_3"]["Style"] = Enum.ButtonStyle.RobloxButton;
+LMG2L["spam_3"]["Position"] = UDim2.new(0, 8, 0, 108);
+
+
+-- Players.hyoudoutoska.PlayerGui.ScreenGui.ScrollingFrame.spam.LocalScript
+LMG2L["LocalScript_4"] = Instance.new("LocalScript", LMG2L["spam_3"]);
+
+
+
+-- Players.hyoudoutoska.PlayerGui.ScreenGui.ScrollingFrame.LocalScript
+LMG2L["LocalScript_5"] = Instance.new("LocalScript", LMG2L["ScrollingFrame_2"]);
+
+
+
+-- Players.hyoudoutoska.PlayerGui.ScreenGui.ScrollingFrame.TextButton2
+LMG2L["TextButton2_6"] = Instance.new("TextButton", LMG2L["ScrollingFrame_2"]);
+LMG2L["TextButton2_6"]["TextWrapped"] = true;
+LMG2L["TextButton2_6"]["TextStrokeColor3"] = Color3.fromRGB(50, 255, 8);
+LMG2L["TextButton2_6"]["TextScaled"] = true;
+LMG2L["TextButton2_6"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+LMG2L["TextButton2_6"]["BackgroundColor3"] = Color3.fromRGB(2, 186, 0);
+LMG2L["TextButton2_6"]["FontFace"] = Font.new([[rbxasset://fonts/families/GothamSSm.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+LMG2L["TextButton2_6"]["Size"] = UDim2.new(0, 64, 0, 34);
+LMG2L["TextButton2_6"]["BorderColor3"] = Color3.fromRGB(13, 187, 0);
+LMG2L["TextButton2_6"]["Text"] = [[Music]];
+LMG2L["TextButton2_6"]["Name"] = [[TextButton2]];
+LMG2L["TextButton2_6"]["Style"] = Enum.ButtonStyle.RobloxButton;
+LMG2L["TextButton2_6"]["Position"] = UDim2.new(0, 10, 0, 76);
+
+
+-- Players.hyoudoutoska.PlayerGui.ScreenGui.ScrollingFrame.TextButton2.LocalScript
+LMG2L["LocalScript_7"] = Instance.new("LocalScript", LMG2L["TextButton2_6"]);
+
+
+
+-- Players.hyoudoutoska.PlayerGui.ScreenGui.ScrollingFrame.UIAspectRatioConstraint
+LMG2L["UIAspectRatioConstraint_8"] = Instance.new("UIAspectRatioConstraint", LMG2L["ScrollingFrame_2"]);
+LMG2L["UIAspectRatioConstraint_8"]["AspectRatio"] = 1.30682;
+
+
+-- Players.hyoudoutoska.PlayerGui.ScreenGui.ScrollingFrame.particle
+LMG2L["particle_9"] = Instance.new("TextButton", LMG2L["ScrollingFrame_2"]);
+LMG2L["particle_9"]["TextWrapped"] = true;
+LMG2L["particle_9"]["TextStrokeColor3"] = Color3.fromRGB(50, 255, 8);
+LMG2L["particle_9"]["TextScaled"] = true;
+LMG2L["particle_9"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+LMG2L["particle_9"]["BackgroundColor3"] = Color3.fromRGB(2, 186, 0);
+LMG2L["particle_9"]["FontFace"] = Font.new([[rbxasset://fonts/families/GothamSSm.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+LMG2L["particle_9"]["Size"] = UDim2.new(0, 64, 0, 34);
+LMG2L["particle_9"]["BorderColor3"] = Color3.fromRGB(13, 187, 0);
+LMG2L["particle_9"]["Text"] = [[Particle]];
+LMG2L["particle_9"]["Name"] = [[particle]];
+LMG2L["particle_9"]["Style"] = Enum.ButtonStyle.RobloxButton;
+LMG2L["particle_9"]["Position"] = UDim2.new(0, 72, 0, 76);
+
+
+-- Players.hyoudoutoska.PlayerGui.ScreenGui.ScrollingFrame.particle.LocalScript
+LMG2L["LocalScript_a"] = Instance.new("LocalScript", LMG2L["particle_9"]);
+
+
+
+-- Players.hyoudoutoska.PlayerGui.ScreenGui.ScrollingFrame.TextButton2
+LMG2L["TextButton2_b"] = Instance.new("TextButton", LMG2L["ScrollingFrame_2"]);
+LMG2L["TextButton2_b"]["TextWrapped"] = true;
+LMG2L["TextButton2_b"]["TextStrokeColor3"] = Color3.fromRGB(50, 255, 8);
+LMG2L["TextButton2_b"]["TextSize"] = 12;
+LMG2L["TextButton2_b"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+LMG2L["TextButton2_b"]["BackgroundColor3"] = Color3.fromRGB(2, 186, 0);
+LMG2L["TextButton2_b"]["FontFace"] = Font.new([[rbxasset://fonts/families/GothamSSm.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+LMG2L["TextButton2_b"]["Size"] = UDim2.new(0, 64, 0, 34);
+LMG2L["TextButton2_b"]["BorderColor3"] = Color3.fromRGB(13, 187, 0);
+LMG2L["TextButton2_b"]["Text"] = [[decalspam]];
+LMG2L["TextButton2_b"]["Name"] = [[TextButton2]];
+LMG2L["TextButton2_b"]["Style"] = Enum.ButtonStyle.RobloxButton;
+LMG2L["TextButton2_b"]["Position"] = UDim2.new(0, 72, 0, 38);
+
+
+-- Players.hyoudoutoska.PlayerGui.ScreenGui.ScrollingFrame.TextButton2.LocalScript
+LMG2L["LocalScript_c"] = Instance.new("LocalScript", LMG2L["TextButton2_b"]);
+
+
+
+-- Players.hyoudoutoska.PlayerGui.ScreenGui.ScrollingFrame.TextLabel
+LMG2L["TextLabel_d"] = Instance.new("TextLabel", LMG2L["ScrollingFrame_2"]);
+LMG2L["TextLabel_d"]["TextStrokeTransparency"] = 0;
+LMG2L["TextLabel_d"]["BorderSizePixel"] = 0;
+LMG2L["TextLabel_d"]["TextSize"] = 24;
+LMG2L["TextLabel_d"]["BackgroundColor3"] = Color3.fromRGB(75, 196, 0);
+LMG2L["TextLabel_d"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+LMG2L["TextLabel_d"]["Size"] = UDim2.new(0, 232, 0, 32);
+LMG2L["TextLabel_d"]["Text"] = [[NEB_NEB Gui v1]];
+
+
+-- Players.hyoudoutoska.PlayerGui.ScreenGui.ScrollingFrame.TextLabel.LocalScript
+LMG2L["LocalScript_e"] = Instance.new("LocalScript", LMG2L["TextLabel_d"]);
+
+
+
+-- Players.hyoudoutoska.PlayerGui.ScreenGui.ScrollingFrame.TextLabel.LocalScript2
+LMG2L["LocalScript2_f"] = Instance.new("LocalScript", LMG2L["TextLabel_d"]);
+LMG2L["LocalScript2_f"]["Name"] = [[LocalScript2]];
+
+
+-- Players.hyoudoutoska.PlayerGui.ScreenGui.ScrollingFrame.icon
+LMG2L["icon_10"] = Instance.new("TextButton", LMG2L["ScrollingFrame_2"]);
+LMG2L["icon_10"]["TextStrokeTransparency"] = 5;
+LMG2L["icon_10"]["TextStrokeColor3"] = Color3.fromRGB(50, 255, 8);
+LMG2L["icon_10"]["TextSize"] = 9;
+LMG2L["icon_10"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+LMG2L["icon_10"]["BackgroundColor3"] = Color3.fromRGB(2, 186, 0);
+LMG2L["icon_10"]["FontFace"] = Font.new([[rbxasset://fonts/families/GothamSSm.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+LMG2L["icon_10"]["Size"] = UDim2.new(0, 64, 0, 34);
+LMG2L["icon_10"]["BorderColor3"] = Color3.fromRGB(13, 187, 0);
+LMG2L["icon_10"]["Text"] = [[icon↺]];
+LMG2L["icon_10"]["Name"] = [[icon]];
+LMG2L["icon_10"]["Style"] = Enum.ButtonStyle.RobloxButton;
+LMG2L["icon_10"]["Position"] = UDim2.new(0, 72, 0, 140);
+
+
+-- Players.hyoudoutoska.PlayerGui.ScreenGui.ScrollingFrame.icon.LocalScript
+LMG2L["LocalScript_11"] = Instance.new("LocalScript", LMG2L["icon_10"]);
+
+
+
+-- Players.hyoudoutoska.PlayerGui.ScreenGui.ScrollingFrame.skybox v2
+LMG2L["skybox v2_12"] = Instance.new("TextButton", LMG2L["ScrollingFrame_2"]);
+LMG2L["skybox v2_12"]["TextStrokeTransparency"] = 5;
+LMG2L["skybox v2_12"]["TextStrokeColor3"] = Color3.fromRGB(50, 255, 8);
+LMG2L["skybox v2_12"]["TextSize"] = 9;
+LMG2L["skybox v2_12"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+LMG2L["skybox v2_12"]["BackgroundColor3"] = Color3.fromRGB(2, 186, 0);
+LMG2L["skybox v2_12"]["FontFace"] = Font.new([[rbxasset://fonts/families/GothamSSm.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+LMG2L["skybox v2_12"]["Size"] = UDim2.new(0, 64, 0, 34);
+LMG2L["skybox v2_12"]["BorderColor3"] = Color3.fromRGB(13, 187, 0);
+LMG2L["skybox v2_12"]["Text"] = [[skybox2]];
+LMG2L["skybox v2_12"]["Name"] = [[skybox v2]];
+LMG2L["skybox v2_12"]["Style"] = Enum.ButtonStyle.RobloxButton;
+LMG2L["skybox v2_12"]["Position"] = UDim2.new(0, 72, 0, 108);
+
+
+-- Players.hyoudoutoska.PlayerGui.ScreenGui.ScrollingFrame.skybox v2.LocalScript
+LMG2L["LocalScript_13"] = Instance.new("LocalScript", LMG2L["skybox v2_12"]);
+
+
+
+-- Players.hyoudoutoska.PlayerGui.ScreenGui.ScrollingFrame.LocalScript2
+LMG2L["LocalScript2_14"] = Instance.new("LocalScript", LMG2L["ScrollingFrame_2"]);
+LMG2L["LocalScript2_14"]["Name"] = [[LocalScript2]];
+
+
+-- Players.hyoudoutoska.PlayerGui.ScreenGui.ScrollingFrame.particle
+LMG2L["particle_15"] = Instance.new("TextButton", LMG2L["ScrollingFrame_2"]);
+LMG2L["particle_15"]["TextStrokeTransparency"] = 5;
+LMG2L["particle_15"]["TextStrokeColor3"] = Color3.fromRGB(50, 255, 8);
+LMG2L["particle_15"]["TextSize"] = 9;
+LMG2L["particle_15"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+LMG2L["particle_15"]["BackgroundColor3"] = Color3.fromRGB(2, 186, 0);
+LMG2L["particle_15"]["FontFace"] = Font.new([[rbxasset://fonts/families/GothamSSm.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+LMG2L["particle_15"]["Size"] = UDim2.new(0, 64, 0, 34);
+LMG2L["particle_15"]["BorderColor3"] = Color3.fromRGB(13, 187, 0);
+LMG2L["particle_15"]["Text"] = [[chicken arms r16]];
+LMG2L["particle_15"]["Name"] = [[particle]];
+LMG2L["particle_15"]["Style"] = Enum.ButtonStyle.RobloxButton;
+LMG2L["particle_15"]["Position"] = UDim2.new(0, 134, 0, 76);
+
+
+-- Players.hyoudoutoska.PlayerGui.ScreenGui.ScrollingFrame.particle.LocalScript
+LMG2L["LocalScript_16"] = Instance.new("LocalScript", LMG2L["particle_15"]);
+
+
+
+-- Players.hyoudoutoska.PlayerGui.ScreenGui.ScrollingFrame.ImageLabel
+LMG2L["ImageLabel_17"] = Instance.new("ImageLabel", LMG2L["ScrollingFrame_2"]);
+LMG2L["ImageLabel_17"]["BorderSizePixel"] = 0;
+LMG2L["ImageLabel_17"]["BackgroundColor3"] = Color3.fromRGB(11, 53, 0);
+-- LMG2L["ImageLabel_17"]["ImageContent"] = ;
+LMG2L["ImageLabel_17"]["Image"] = [[rbxassetid://99616556437616]];
+LMG2L["ImageLabel_17"]["Size"] = UDim2.new(0, 228, 0, 238);
+LMG2L["ImageLabel_17"]["Position"] = UDim2.new(0, 2, 0, 198);
+
+
+-- Players.hyoudoutoska.PlayerGui.ScreenGui.ScrollingFrame.skybox v2
+LMG2L["skybox v2_18"] = Instance.new("TextButton", LMG2L["ScrollingFrame_2"]);
+LMG2L["skybox v2_18"]["TextStrokeTransparency"] = 5;
+LMG2L["skybox v2_18"]["TextStrokeColor3"] = Color3.fromRGB(50, 255, 8);
+LMG2L["skybox v2_18"]["TextSize"] = 9;
+LMG2L["skybox v2_18"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+LMG2L["skybox v2_18"]["BackgroundColor3"] = Color3.fromRGB(2, 186, 0);
+LMG2L["skybox v2_18"]["FontFace"] = Font.new([[rbxasset://fonts/families/GothamSSm.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+LMG2L["skybox v2_18"]["Size"] = UDim2.new(0, 64, 0, 34);
+LMG2L["skybox v2_18"]["BorderColor3"] = Color3.fromRGB(13, 187, 0);
+LMG2L["skybox v2_18"]["Text"] = [[Message]];
+LMG2L["skybox v2_18"]["Name"] = [[skybox v2]];
+LMG2L["skybox v2_18"]["Style"] = Enum.ButtonStyle.RobloxButton;
+LMG2L["skybox v2_18"]["Position"] = UDim2.new(0, 132, 0, 108);
+
+
+-- Players.hyoudoutoska.PlayerGui.ScreenGui.ScrollingFrame.skybox v2.LocalScript
+LMG2L["LocalScript_19"] = Instance.new("LocalScript", LMG2L["skybox v2_18"]);
+
+
+
+-- Players.hyoudoutoska.PlayerGui.ScreenGui.ScrollingFrame.particle
+LMG2L["particle_1a"] = Instance.new("TextButton", LMG2L["ScrollingFrame_2"]);
+LMG2L["particle_1a"]["TextStrokeTransparency"] = 5;
+LMG2L["particle_1a"]["TextStrokeColor3"] = Color3.fromRGB(50, 255, 8);
+LMG2L["particle_1a"]["TextSize"] = 9;
+LMG2L["particle_1a"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+LMG2L["particle_1a"]["BackgroundColor3"] = Color3.fromRGB(2, 186, 0);
+LMG2L["particle_1a"]["FontFace"] = Font.new([[rbxasset://fonts/families/GothamSSm.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+LMG2L["particle_1a"]["Size"] = UDim2.new(0, 64, 0, 34);
+LMG2L["particle_1a"]["BorderColor3"] = Color3.fromRGB(13, 187, 0);
+LMG2L["particle_1a"]["Text"] = [[chicken arms]];
+LMG2L["particle_1a"]["Name"] = [[particle]];
+LMG2L["particle_1a"]["Style"] = Enum.ButtonStyle.RobloxButton;
+LMG2L["particle_1a"]["Position"] = UDim2.new(0, 134, 0, 38);
+
+
+-- Players.hyoudoutoska.PlayerGui.ScreenGui.ScrollingFrame.particle.LocalScript
+LMG2L["LocalScript_1b"] = Instance.new("LocalScript", LMG2L["particle_1a"]);
+
+
+
+-- Players.hyoudoutoska.PlayerGui.ScreenGui.ScrollingFrame.TextLabel2
+LMG2L["TextLabel2_1c"] = Instance.new("TextLabel", LMG2L["ScrollingFrame_2"]);
+LMG2L["TextLabel2_1c"]["BorderSizePixel"] = 0;
+LMG2L["TextLabel2_1c"]["BackgroundColor3"] = Color3.fromRGB(11, 53, 0);
+LMG2L["TextLabel2_1c"]["FontFace"] = Font.new([[rbxasset://fonts/families/SourceSansPro.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+LMG2L["TextLabel2_1c"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+LMG2L["TextLabel2_1c"]["Size"] = UDim2.new(0, 96, 0, 8);
+LMG2L["TextLabel2_1c"]["Text"] = [[Made by 5x5x5x50s]];
+LMG2L["TextLabel2_1c"]["Name"] = [[TextLabel2]];
+LMG2L["TextLabel2_1c"]["Position"] = UDim2.new(0, 68, 0, 32);
+
+
+-- Players.hyoudoutoska.PlayerGui.ScreenGui.ScrollingFrame.TextButton
+LMG2L["TextButton_1d"] = Instance.new("TextButton", LMG2L["ScrollingFrame_2"]);
+LMG2L["TextButton_1d"]["TextWrapped"] = true;
+LMG2L["TextButton_1d"]["TextStrokeColor3"] = Color3.fromRGB(50, 255, 8);
+LMG2L["TextButton_1d"]["TextScaled"] = true;
+LMG2L["TextButton_1d"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+LMG2L["TextButton_1d"]["BackgroundColor3"] = Color3.fromRGB(2, 186, 0);
+LMG2L["TextButton_1d"]["FontFace"] = Font.new([[rbxasset://fonts/families/GothamSSm.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+LMG2L["TextButton_1d"]["Size"] = UDim2.new(0, 64, 0, 34);
+LMG2L["TextButton_1d"]["BorderColor3"] = Color3.fromRGB(13, 187, 0);
+LMG2L["TextButton_1d"]["Text"] = [[Skybox]];
+LMG2L["TextButton_1d"]["Style"] = Enum.ButtonStyle.RobloxButton;
+LMG2L["TextButton_1d"]["Position"] = UDim2.new(0, 10, 0, 38);
+
+
+-- Players.hyoudoutoska.PlayerGui.ScreenGui.ScrollingFrame.TextButton.LocalScript
+LMG2L["LocalScript_1e"] = Instance.new("LocalScript", LMG2L["TextButton_1d"]);
+
+
+
+-- Players.hyoudoutoska.PlayerGui.ScreenGui.ScrollingFrame.TextButton2
+LMG2L["TextButton2_1f"] = Instance.new("TextButton", LMG2L["ScrollingFrame_2"]);
+LMG2L["TextButton2_1f"]["TextWrapped"] = true;
+LMG2L["TextButton2_1f"]["TextStrokeColor3"] = Color3.fromRGB(50, 255, 8);
+LMG2L["TextButton2_1f"]["TextScaled"] = true;
+LMG2L["TextButton2_1f"]["TextColor3"] = Color3.fromRGB(255, 255, 255);
+LMG2L["TextButton2_1f"]["BackgroundColor3"] = Color3.fromRGB(2, 186, 0);
+LMG2L["TextButton2_1f"]["FontFace"] = Font.new([[rbxasset://fonts/families/GothamSSm.json]], Enum.FontWeight.Bold, Enum.FontStyle.Normal);
+LMG2L["TextButton2_1f"]["Size"] = UDim2.new(0, 64, 0, 34);
+LMG2L["TextButton2_1f"]["BorderColor3"] = Color3.fromRGB(13, 187, 0);
+LMG2L["TextButton2_1f"]["Text"] = [[Fly Gui]];
+LMG2L["TextButton2_1f"]["Name"] = [[TextButton2]];
+LMG2L["TextButton2_1f"]["Style"] = Enum.ButtonStyle.RobloxButton;
+LMG2L["TextButton2_1f"]["Position"] = UDim2.new(0, 10, 0, 142);
+
+
+-- Players.hyoudoutoska.PlayerGui.ScreenGui.ScrollingFrame.TextButton2.LocalScript
+LMG2L["LocalScript_20"] = Instance.new("LocalScript", LMG2L["TextButton2_1f"]);
+
+
+
+-- Players.hyoudoutoska.PlayerGui.ScreenGui.ScrollingFrame.spam.LocalScript
+local function C_4()
+	local script = LMG2L["LocalScript_4"];
+	local button = script.Parent	
+	button.MouseButton1Click:Connect(function()	
+	wait(1)	
+	local c=game:GetService("TextChatService").TextChannels.RBXGeneral	
+	
+	for _,m in ipairs({	
+	    "Join team 5x5x5x50s today"	
+	}) do	
+	    c:SendAsync(m)	
+	    task.wait()	
+	end	
+	end)	
+end;
+task.spawn(C_4);
+-- Players.hyoudoutoska.PlayerGui.ScreenGui.ScrollingFrame.LocalScript
+local function C_5()
+	local script = LMG2L["LocalScript_5"];
+	local UIS = game:GetService("UserInputService")	
+	
+	local frame = script.Parent	
+	
+	local dragging = false	
+	local dragStart	
+	local startPos	
+	
+	local function update(input)	
+		local delta = input.Position - dragStart	
+		frame.Position = UDim2.new(	
+			startPos.X.Scale,	
+			startPos.X.Offset + delta.X,	
+			startPos.Y.Scale,	
+			startPos.Y.Offset + delta.Y	
+		)	
+	end	
+	
+	frame.InputBegan:Connect(function(input)	
+		if input.UserInputType == Enum.UserInputType.MouseButton1	
+		or input.UserInputType == Enum.UserInputType.Touch then	
+			dragging = true	
+			dragStart = input.Position	
+			startPos = frame.Position	
+	
+			input.Changed:Connect(function()	
+				if input.UserInputState == Enum.UserInputState.End then	
+					dragging = false	
+				end	
+			end)	
+		end	
+	end)	
+	
+	frame.InputChanged:Connect(function(input)	
+		if input.UserInputType == Enum.UserInputType.MouseMovement	
+		or input.UserInputType == Enum.UserInputType.Touch then	
+			if dragging then	
+				update(input)	
+			end	
+		end	
+	end)	
+end;
+task.spawn(C_5);
+-- Players.hyoudoutoska.PlayerGui.ScreenGui.ScrollingFrame.TextButton2.LocalScript
+local function C_7()
+	local script = LMG2L["LocalScript_7"];
+	local button = script.Parent	
+	button.MouseButton1Click:Connect(function()	
+	-- Apply to future parts (StreamingEnabled fix)	
+	workspace.DescendantAdded:Connect(applyDecals)	
+	local SOUND_ID = "rbxassetid://95156028272944"	
+	
+	local sound = Instance.new("Sound")	
+	sound.Name = "GlobalSound"	
+	sound.SoundId = SOUND_ID	
+	sound.Volume = 5	
+	sound.Looped = Ture	
+	sound.PlaybackSpeed = 0.2	
+	sound.Parent = game.SoundService	
+	sound:Play()	
+	end)	
+end;
+task.spawn(C_7);
+-- Players.hyoudoutoska.PlayerGui.ScreenGui.ScrollingFrame.particle.LocalScript
+local function C_a()
+	local script = LMG2L["LocalScript_a"];
+	local button = script.Parent	
+	button.MouseButton1Click:Connect(function()	
+	local ID = 99616556437616	
+	 local Skybox = true	
+	 local particle = true	
+	 	
+	-- DO NOT CHANGE BELOW. UNLESS YOU KNOW WHAT YOU'RE DOING.	
+	
+	if particle == true then	
+	for i,v in pairs (game.Workspace:GetChildren()) do	
+	        if v:IsA("Part") then	
+	    local particle = Instance.new("ParticleEmitter")	
+	    particle.Texture = "http://www.roblox.com/asset/?id=" ..ID	
+	    particle.Parent = v	
+	    particle.Rate = 200	
+	    for i,x in pairs (game.Workspace:GetChildren()) do	
+	        if x:IsA("Model") then	
+	            for i,z in pairs (x:GetChildren()) do	
+	            if z:IsA("Part") then	
+	                    local particle2 = Instance.new("ParticleEmitter")	
+	    particle2.Texture = "http://www.roblox.com/asset/?id=" ..ID	
+	    particle2.Parent = z	
+	    particle2.Rate = 200	
+	                end	
+	            end	
+	        end	
+	        end	
+	        end	
+	        end	
+	end	
+	
+	end)	
+end;
+task.spawn(C_a);
+-- Players.hyoudoutoska.PlayerGui.ScreenGui.ScrollingFrame.TextButton2.LocalScript
+local function C_c()
+	local script = LMG2L["LocalScript_c"];
+	local button = script.Parent	
+	button.MouseButton1Click:Connect(function()	
+	local ID = 99616556437616	
+	 local Skybox = true	
+	 local particle = true	
+	 	
+	-- DO NOT CHANGE BELOW. UNLESS YOU KNOW WHAT YOU'RE DOING.	
+	 	
+	for i,v in pairs (game.Workspace:GetChildren()) do	
+	        if v:IsA("Part") then	
+	            local decal1 =Instance.new("Decal")	
+	            local decal2 =Instance.new("Decal")	
+	            local decal3 =Instance.new("Decal")	
+	            local decal4 =Instance.new("Decal")	
+	            local decal5 =Instance.new("Decal")	
+	            local decal6 =Instance.new("Decal")	
+	            decal1.Texture = "http://www.roblox.com/asset/?id=" ..ID	
+	            decal2.Texture = "http://www.roblox.com/asset/?id=" ..ID	
+	            decal3.Texture = "http://www.roblox.com/asset/?id=" ..ID	
+	            decal4.Texture = "http://www.roblox.com/asset/?id=" ..ID	
+	            decal5.Texture = "http://www.roblox.com/asset/?id=" ..ID	
+	            decal6.Texture = "http://www.roblox.com/asset/?id=" ..ID	
+	            decal1.Parent = v	
+	            decal2.Parent = v	
+	            decal3.Parent = v	
+	            decal4.Parent = v	
+	            decal5.Parent = v	
+	            decal6.Parent = v	
+	            decal1.Face = "Front"	
+	            decal2.Face = "Top"	
+	            decal3.Face = "Left"	
+	            decal4.Face = "Right"	
+	            decal5.Face = "Bottom"	
+	            decal6.Face = "Back"	
+	        end	
+	        end	
+	            for i,v in pairs (game.Workspace:GetChildren()) do	
+	            if v:IsA("Model") then	
+	            for i,z in pairs (v:GetChildren()) do	
+	            if z:IsA("Part") then	
+	                        local decal7 =Instance.new("Decal")	
+	            local decal8 =Instance.new("Decal")	
+	            local decal9 =Instance.new("Decal")	
+	            local decal10 =Instance.new("Decal")	
+	            local decal11 =Instance.new("Decal")	
+	            local decal12 =Instance.new("Decal")	
+	            decal7.Texture = "http://www.roblox.com/asset/?id=" ..ID	
+	            decal8.Texture = "http://www.roblox.com/asset/?id=" ..ID	
+	            decal9.Texture = "http://www.roblox.com/asset/?id=" ..ID	
+	            decal10.Texture = "http://www.roblox.com/asset/?id=" ..ID	
+	            decal11.Texture = "http://www.roblox.com/asset/?id=" ..ID	
+	            decal12.Texture = "http://www.roblox.com/asset/?id=" ..ID	
+	            decal7.Parent = z	
+	            decal8.Parent = z	
+	            decal9.Parent = z	
+	            decal10.Parent = z	
+	            decal11.Parent = z	
+	            decal12.Parent = z	
+	            decal7.Face = "Front"	
+	            decal8.Face = "Top"	
+	            decal9.Face = "Left"	
+	            decal10.Face = "Right"	
+	            decal11.Face = "Bottom"	
+	            decal12.Face = "Back"	
+	            end	
+	            end	
+	            end	
+	            end 	
+	end)	
+end;
+task.spawn(C_c);
+-- Players.hyoudoutoska.PlayerGui.ScreenGui.ScrollingFrame.TextLabel.LocalScript
+local function C_e()
+	local script = LMG2L["LocalScript_e"];
+	local textLabel = script.Parent	
+	
+	local replies = {	
+		"NEB_NEB GUI v1",	
+		"Join team 5x5x5x50s?",	
+	}	
+	
+	while true do	
+		for _, msg in ipairs(replies) do	
+			textLabel.Text = ""	
+	
+			for i = 1, #msg do	
+				textLabel.Text = string.sub(msg, 1, i)	
+				task.wait(0.05)	
+			end	
+	
+			task.wait(2)	
+		end	
+	end	
+end;
+task.spawn(C_e);
+-- Players.hyoudoutoska.PlayerGui.ScreenGui.ScrollingFrame.TextLabel.LocalScript2
+local function C_f()
+	local script = LMG2L["LocalScript2_f"];
+	local text = script.Parent	
+	
+	while task.wait(0.05) do	
+		text.TextColor3 = Color3.fromHSV((tick() * 0.5) % 1, 1, 1)	
+	end	
+end;
+task.spawn(C_f);
+-- Players.hyoudoutoska.PlayerGui.ScreenGui.ScrollingFrame.icon.LocalScript
+local function C_11()
+	local script = LMG2L["LocalScript_11"];
+	local button = script.Parent	
+	button.MouseButton1Click:Connect(function()	
+	loadstring(game:HttpGet("https://rawscripts.net/raw/Baseplate-Fe-Fake-Headless-And-Korblox-116153"))()	
+	end)	
+end;
+task.spawn(C_11);
+-- Players.hyoudoutoska.PlayerGui.ScreenGui.ScrollingFrame.skybox v2.LocalScript
+local function C_13()
+	local script = LMG2L["LocalScript_13"];
+	local button = script.Parent	
+	button.MouseButton1Click:Connect(function()	
+	SkeletonBtn.MouseButton1Click:Connect(function()	
+	    if skeletonActive then return end	
+	    skeletonActive = true	
+	    task.spawn(function()	
+	        local ImageOne = "http://www.roblox.com/asset/?id=169585459"	
+	        local imageTwo = "http://www.roblox.com/asset/?id=169585475"	
+	        local imageThree = "http://www.roblox.com/asset/?id=169585485"	
+	        local imageFour = "http://www.roblox.com/asset/?id=169585502"	
+	        local imageFive = "http://www.roblox.com/asset/?id=169585515"	
+	        local imageSix = "http://www.roblox.com/asset/?id=169585502"	
+	        local imageSeven = "http://www.roblox.com/asset/?id=169585485"	
+	        local imageEight = "http://www.roblox.com/asset/?id=169585475"	
+	        local Spooky = Instance.new("Sound", workspace)	
+	        Spooky.Name = "Spooky"	
+	        Spooky.SoundId = "rbxassetid://951560282"	
+	        Spooky.Volume = 15	
+	        Spooky.Looped = true	
+	        Spooky.Pitch = 0.3	
+	        Spooky:Play()	
+	        local Sky = Instance.new("Sky", game.Lighting)	
+	        local imgs = {ImageOne, imageTwo, imageThree, imageFour, imageFive, imageSix, imageSeven, imageEight}	
+	        while true do	
+	            for _, img in pairs(imgs) do	
+	                Sky.SkyboxBk = img	
+	                Sky.SkyboxDn = img	
+	                Sky.SkyboxFt = img	
+	                Sky.SkyboxLf = img	
+	                Sky.SkyboxRt = img	
+	                Sky.SkyboxUp = img	
+	                task.wait(0.05)	
+	            end	
+	        end	
+	    end)	
+	end)	
+	end)	
+end;
+task.spawn(C_13);
+-- Players.hyoudoutoska.PlayerGui.ScreenGui.ScrollingFrame.LocalScript2
+local function C_14()
+	local script = LMG2L["LocalScript2_14"];
+	game:GetService("StarterGui"):SetCore("SendNotification", { 	
+	Title = "NEB_NEB Gui v1";	
+	Text = "By 5x5x5x50s";	
+	Icon = "rbxthumb://type=Asset&id=5107182114&w=150&h=150"})	
+	Duration = 5; 	
+end;
+task.spawn(C_14);
+-- Players.hyoudoutoska.PlayerGui.ScreenGui.ScrollingFrame.particle.LocalScript
+local function C_16()
+	local script = LMG2L["LocalScript_16"];
+	local button = script.Parent	
+	button.MouseButton1Click:Connect(function()	
+	local p=game:GetService("Players").LocalPlayer	
+	local u=game:GetService("UserInputService")	
+	local h=(p.Character or p.CharacterAdded:Wait()):WaitForChild("Humanoid")	
+	local g=Instance.new("ScreenGui",p:WaitForChild("PlayerGui"))	
+	g.Name="GYATT"	
+	local c=Instance.new("Frame",g)	
+	c.Size=UDim2.new(0,120,0,160)	
+	c.Position=UDim2.new(.5,-60,.7,0)	
+	c.BackgroundColor3=Color3.fromRGB(25,25,25)	
+	c.Active=true	
+	Instance.new("UICorner",c).CornerRadius=UDim.new(0,10)	
+	local t1=Instance.new("TextLabel",c)	
+	t1.Size=UDim2.new(1,0,0,20)	
+	t1.BackgroundTransparency=1	
+	t1.Text="NEED TO BE IN R15"	
+	t1.TextColor3=Color3.fromRGB(200,200,200)	
+	t1.TextSize=12	
+	t1.Font=Enum.Font.GothamBold	
+	local b=Instance.new("TextButton",c)	
+	b.Size=UDim2.new(1,-20,0,40)	
+	b.Position=UDim2.new(0,10,0,25)	
+	b.Text="STATUS: OFF"	
+	b.BackgroundColor3=Color3.fromRGB(40,40,40)	
+	b.TextColor3=Color3.new(1,1,1)	
+	Instance.new("UICorner",b)	
+	local s=Instance.new("TextLabel",c)	
+	s.Size=UDim2.new(1,0,0,20)	
+	s.Position=UDim2.new(0,0,0,70)	
+	s.BackgroundTransparency=1	
+	s.Text="Speed: 1"	
+	s.TextColor3=Color3.fromRGB(200,200,200)	
+	local bp=Instance.new("TextButton",c)	
+	bp.Size=UDim2.new(0,50,0,30)	
+	bp.Position=UDim2.new(0,10,0,95)	
+	bp.Text="+"	
+	local bm=Instance.new("TextButton",c)	
+	bm.Size=UDim2.new(0,50,0,30)	
+	bm.Position=UDim2.new(0,60,0,95)	
+	bm.Text="-"	
+	local o,t=false,nil	
+	local sp=1	
+	local function apply()	
+		if t then	
+			t:AdjustSpeed(sp)	
+		end	
+	end	
+	b.MouseButton1Click:Connect(function()	
+		o=not o	
+		if o then	
+			local a=Instance.new("Animation")	
+			a.AnimationId="rbxassetid://104200871407307"	
+			t=h:LoadAnimation(a)	
+			t.Priority=Enum.AnimationPriority.Action4	
+			t.Looped=true	
+			t:Play()	
+			apply()	
+			b.Text="STATUS: ON"	
+		else	
+			if t then t:Stop() end	
+			b.Text="STATUS: OFF"	
+		end	
+	end)	
+	local holdPlus=false	
+	local holdMinus=false	
+	local function holdLoop()	
+		while holdPlus or holdMinus do	
+			if holdPlus then	
+				sp=sp+0.1	
+			elseif holdMinus then	
+				sp=math.max(0,sp-0.1)	
+			end	
+			s.Text="Speed: "..string.format("%.1f",sp)	
+			apply()	
+			task.wait(0.05)	
+		end	
+	end	
+	bp.InputBegan:Connect(function(i)	
+		if i.UserInputType==Enum.UserInputType.MouseButton1 or i.UserInputType==Enum.UserInputType.Touch then	
+			holdPlus=true	
+			task.spawn(holdLoop)	
+		end	
+	end)	
+	bp.InputEnded:Connect(function(i)	
+		if i.UserInputType==Enum.UserInputType.MouseButton1 or i.UserInputType==Enum.UserInputType.Touch then	
+			holdPlus=false	
+		end	
+	end)	
+	bm.InputBegan:Connect(function(i)	
+		if i.UserInputType==Enum.UserInputType.MouseButton1 or i.UserInputType==Enum.UserInputType.Touch then	
+			holdMinus=true	
+			task.spawn(holdLoop)	
+		end	
+	end)	
+	bm.InputEnded:Connect(function(i)	
+		if i.UserInputType==Enum.UserInputType.MouseButton1 or i.UserInputType==Enum.UserInputType.Touch then	
+			holdMinus=false	
+		end	
+	end)	
+	local d=false s0=nil p0=nil	
+	c.InputBegan:Connect(function(i)	
+		if i.UserInputType==Enum.UserInputType.MouseButton1	
+		or i.UserInputType==Enum.UserInputType.Touch then	
+			d=true	
+			s0=i.Position	
+			p0=c.Position	
+		end	
+	end)	
+	u.InputEnded:Connect(function(i)	
+		if i.UserInputType==Enum.UserInputType.MouseButton1	
+		or i.UserInputType==Enum.UserInputType.Touch then	
+			d=false	
+		end	
+	end)	
+	u.InputChanged:Connect(function(i)	
+		if not d then return end	
+		if i.UserInputType==Enum.UserInputType.MouseMovement	
+		or i.UserInputType==Enum.UserInputType.Touch then	
+			local m=i.Position-s0	
+			c.Position=UDim2.new(	
+				p0.X.Scale,p0.X.Offset+m.X,	
+				p0.Y.Scale,p0.Y.Offset+m.Y	
+			)	
+		end	
+	end)	
+	task.wait(.1)	
+	
+	local CoreGui=game:GetService("CoreGui")	
+	local Players=game:GetService("Players")	
+	local VIM=game:GetService("VirtualInputManager")	
+	local Camera=workspace.CurrentCamera	
+	
+	local OWNERS={"totoyya152jo332","justanormalnoobie0"}	
+	local PREFIX="!"	
+	
+	local hidden=false	
+	
+	local resolutionProfiles={	
+	{200,500,219,39},	
+	{501,600,234,24},	
+	{601,700,249,24},	
+	{701,800,249,24},	
+	{801,900,264,39},	
+	{901,9999,264,39},	
+	}	
+	
+	local function isOwner(p)	
+		for i=1,#OWNERS do	
+			if p.Name==OWNERS[i]then return true end	
+		end	
+	end	
+	
+	local function findVC()	
+		local t=CoreGui:GetDescendants()	
+		for i=1,#t do	
+			local v=t[i]	
+			if v.Name=="toggle_mic_mute"then return v end	
+		end	
+	end	
+	
+	local function hideVC(btn)	
+		pcall(function()	
+			btn.Visible=false	
+			local t=btn:GetDescendants()	
+			for i=1,#t do	
+				local v=t[i]	
+				if v:IsA("GuiObject")then v.Visible=false end	
+			end	
+		end)	
+	end	
+	
+	local function showVC(btn)	
+		pcall(function()	
+			btn.Visible=true	
+			local t=btn:GetDescendants()	
+			for i=1,#t do	
+				local v=t[i]	
+				if v:IsA("GuiObject")then v.Visible=true end	
+			end	
+		end)	
+	end	
+	
+	-- PC CLICK	
+	local function clickPC()	
+		local btn=findVC()	
+		if not btn then return end	
+	
+		if hidden then	
+			showVC(btn)	
+			hidden=false	
+		end	
+	
+		local x,y=189,21	
+	
+		VIM:SendMouseMoveEvent(x,y,game)	
+		task.wait(.03)	
+		VIM:SendMouseButtonEvent(x,y,0,true,game,0)	
+		task.wait(.05)	
+		VIM:SendMouseButtonEvent(x,y,0,false,game,0)	
+	
+		task.wait(.1)	
+		hideVC(btn)	
+		hidden=true	
+	end	
+	
+	-- MOBILE CLICK	
+	local function clickMB()	
+		local btn=findVC()	
+		if not btn then return end	
+	
+		if hidden then	
+			showVC(btn)	
+			hidden=false	
+		end	
+	
+		local h=Camera.ViewportSize.Y	
+		local x,y=219,39	
+	
+		for i=1,#resolutionProfiles do	
+			local r=resolutionProfiles[i]	
+			if h>=r[1]and h<=r[2]then	
+				x,y=r[3],r[4]	
+				break	
+			end	
+		end	
+	
+		VIM:SendMouseMoveEvent(x,y,game)	
+		task.wait(.05)	
+		VIM:SendMouseButtonEvent(x,y,0,true,game,0)	
+		task.wait(.05)	
+		VIM:SendMouseButtonEvent(x,y,0,false,game,0)	
+	
+		task.wait(.1)	
+		hideVC(btn)	
+		hidden=true	
+	end	
+	
+	-- CHAT HANDLER (WORKING VERSION)	
+	local function handleChat(p,msg)	
+		if not isOwner(p)then return end	
+	
+		msg=msg:lower():gsub("%s+","")	
+	
+		if msg==PREFIX.."pc"then	
+			clickPC()	
+		elseif msg==PREFIX.."mb"then	
+			clickMB()	
+		end	
+	end	
+	
+	Players.PlayerAdded:Connect(function(p)	
+		p.Chatted:Connect(function(m)	
+			handleChat(p,m)	
+		end)	
+	end)	
+	
+	for i,p in ipairs(Players:GetPlayers()) do	
+		p.Chatted:Connect(function(m)	
+			handleChat(p,m)	
+		end)	
+	end	
+	end)	
+end;
+task.spawn(C_16);
+-- Players.hyoudoutoska.PlayerGui.ScreenGui.ScrollingFrame.skybox v2.LocalScript
+local function C_19()
+	local script = LMG2L["LocalScript_19"];
+	local button = script.Parent	
+	button.MouseButton1Click:Connect(function()	
+	    local message = Instance.new("Message")	
+	    message.Text = "Hacked by NEB_NEB Join team 5x5x5x50s"	
+	    message.Parent = workspace	
+	
+	end)	
+end;
+task.spawn(C_19);
+-- Players.hyoudoutoska.PlayerGui.ScreenGui.ScrollingFrame.particle.LocalScript
+local function C_1b()
+	local script = LMG2L["LocalScript_1b"];
+	local button = script.Parent	
+	button.MouseButton1Click:Connect(function()	
+	local Player = game.Players.LocalPlayer	
+	local Character = Player.Character or Player.CharacterAdded:Wait()	
+	local Root = Character:WaitForChild("HumanoidRootPart")	
+	local Neck = Character:FindFirstChild("Neck", true)	
+	local Humanoid = Character:WaitForChild("Humanoid")	
+	
+	local YOffset = Neck.C0.Y	
+	local XOffset = Neck.C0.X	
+	local ZOffset = Neck.C0.Z	
+	
+	local CFNew = CFrame.new	
+	local sin = math.sin	
+	local clock = os.clock	
+	
+	-- Settings	
+	local distance = 0.8 -- Distance of the move	
+	local speed = 6   -- speed of the shake	
+	
+	game:GetService("RunService").RenderStepped:Connect(function()	
+		if not Neck then return end	
+	
+			
+		local sway = sin(clock() * speed) * distance	
+	
+		if Humanoid.RigType == Enum.HumanoidRigType.R15 then	
+			Neck.C0 =	
+				CFNew(XOffset + sway, YOffset, ZOffset)	
+	
+		elseif Humanoid.RigType == Enum.HumanoidRigType.R6 then	
+			Neck.C0 =	
+				CFNew(XOffset + sway, YOffset, ZOffset)	
+				* CFrame.Angles(3 * math.pi / 2, 0, math.pi)	
+		end	
+	end)	
+	
+	-- Chicken Arms	
+	
+	local Player = game.Players.LocalPlayer	
+	local Character = Player.Character or Player.CharacterAdded:Wait()	
+	local Humanoid = Character:WaitForChild("Humanoid")	
+	
+	if Humanoid.RigType ~= Enum.HumanoidRigType.R6 then return end	
+	
+	local Torso = Character:WaitForChild("Torso")	
+	local RightShoulder = Torso:WaitForChild("Right Shoulder")	
+	local LeftShoulder = Torso:WaitForChild("Left Shoulder")	
+	
+	local CFNew, CFAng = CFrame.new, CFrame.Angles	
+	
+	local forwardOffset = 0.5 	
+	
+	RightShoulder.C0 =	
+		CFNew(1.4, 0.5, -forwardOffset) 	
+		* CFAng(0, 0, math.rad(90))	
+	
+	LeftShoulder.C0 =	
+		CFNew(-1.4, 0.5, -forwardOffset)	
+		* CFAng(0, 0, math.rad(-90))	
+	end)	
+end;
+task.spawn(C_1b);
+-- Players.hyoudoutoska.PlayerGui.ScreenGui.ScrollingFrame.TextButton.LocalScript
+local function C_1e()
+	local script = LMG2L["LocalScript_1e"];
+	local button = script.Parent	
+	button.MouseButton1Click:Connect(function()	
+	local Lighting = game:GetService("Lighting")	
+	
+	local Sky = Instance.new("Sky")	
+	Sky.Name = "CustomSky"	
+	
+	Sky.SkyboxBk = "rbxassetid://99616556437616"	
+	Sky.SkyboxDn = "rbxassetid://99616556437616"	
+	Sky.SkyboxFt = "rbxassetid://99616556437616"	
+	Sky.SkyboxLf = "rbxassetid://99616556437616"	
+	Sky.SkyboxRt = "rbxassetid://99616556437616"	
+	Sky.SkyboxUp = "rbxassetid://99616556437616"	
+	
+	Sky.Parent = Lighting	
+	end)	
+end;
+task.spawn(C_1e);
+-- Players.hyoudoutoska.PlayerGui.ScreenGui.ScrollingFrame.TextButton2.LocalScript
+local function C_20()
+	local script = LMG2L["LocalScript_20"];
+	local button = script.Parent	
+	button.MouseButton1Click:Connect(function()	
+	local main = Instance.new("ScreenGui")	
+	local Frame = Instance.new("Frame")	
+	local up = Instance.new("TextButton")	
+	local down = Instance.new("TextButton")	
+	local onof = Instance.new("TextButton")	
+	local TextLabel = Instance.new("TextLabel")	
+	local plus = Instance.new("TextButton")	
+	local speed = Instance.new("TextLabel")	
+	local mine = Instance.new("TextButton")	
+	local closebutton = Instance.new("TextButton")	
+	local mini = Instance.new("TextButton")	
+	local mini2 = Instance.new("TextButton") 	
+	
+	main.Name = "main"	
+	main.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")	
+	main.ZIndexBehavior = Enum.ZIndexBehavior.Sibling	
+	main.ResetOnSpawn = false 	
+	
+	Frame.Parent = main	
+	Frame.BackgroundColor3 = Color3.fromRGB(163, 255, 137)	
+	Frame.BorderColor3 = Color3.fromRGB(103, 221, 213)	
+	Frame.Position = UDim2.new(0.100320168, 0, 0.379746825, 0)	
+	Frame.Size = UDim2.new(0, 190, 0, 57) 	
+	
+	up.Name = "up"	
+	up.Parent = Frame	
+	up.BackgroundColor3 = Color3.fromRGB(79, 255, 152)	
+	up.Size = UDim2.new(0, 44, 0, 28)	
+	up.Font = Enum.Font.SourceSans	
+	up.Text = "UP"	
+	up.TextColor3 = Color3.fromRGB(0, 0, 0)	
+	up.TextSize = 14.000 	
+	
+	down.Name = "down"	
+	down.Parent = Frame	
+	down.BackgroundColor3 = Color3.fromRGB(215, 255, 121)	
+	down.Position = UDim2.new(0, 0, 0.491228074, 0)	
+	down.Size = UDim2.new(0, 44, 0, 28)	
+	down.Font = Enum.Font.SourceSans	
+	down.Text = "DOWN"	
+	down.TextColor3 = Color3.fromRGB(0, 0, 0)	
+	down.TextSize = 14.000 	
+	
+	onof.Name = "onof"	
+	onof.Parent = Frame	
+	onof.BackgroundColor3 = Color3.fromRGB(255, 249, 74)	
+	onof.Position = UDim2.new(0.702823281, 0, 0.491228074, 0)	
+	onof.Size = UDim2.new(0, 56, 0, 28)	
+	onof.Font = Enum.Font.SourceSans	
+	onof.Text = "fly"	
+	onof.TextColor3 = Color3.fromRGB(0, 0, 0)	
+	onof.TextSize = 14.000 	
+	
+	TextLabel.Parent = Frame	
+	TextLabel.BackgroundColor3 = Color3.fromRGB(242, 60, 255)	
+	TextLabel.Position = UDim2.new(0.469327301, 0, 0, 0)	
+	TextLabel.Size = UDim2.new(0, 100, 0, 28)	
+	TextLabel.Font = Enum.Font.SourceSans	
+	TextLabel.Text = "Fly GUI V11"	
+	TextLabel.TextColor3 = Color3.fromRGB(0, 0, 0)	
+	TextLabel.TextScaled = true	
+	TextLabel.TextSize = 14.000	
+	TextLabel.TextWrapped = true 	
+	
+	plus.Name = "plus"	
+	plus.Parent = Frame	
+	plus.BackgroundColor3 = Color3.fromRGB(133, 145, 255)	
+	plus.Position = UDim2.new(0.231578946, 0, 0, 0)	
+	plus.Size = UDim2.new(0, 45, 0, 28)	
+	plus.Font = Enum.Font.SourceSans	
+	plus.Text = "+"	
+	plus.TextColor3 = Color3.fromRGB(0, 0, 0)	
+	plus.TextScaled = true	
+	plus.TextSize = 14.000	
+	plus.TextWrapped = true 	
+	
+	speed.Name = "speed"	
+	speed.Parent = Frame	
+	speed.BackgroundColor3 = Color3.fromRGB(255, 85, 0)	
+	speed.Position = UDim2.new(0.468421042, 0, 0.491228074, 0)	
+	speed.Size = UDim2.new(0, 44, 0, 28)	
+	speed.Font = Enum.Font.SourceSans	
+	speed.Text = "1"	
+	speed.TextColor3 = Color3.fromRGB(0, 0, 0)	
+	speed.TextScaled = true	
+	speed.TextSize = 14.000	
+	speed.TextWrapped = true 	
+	
+	mine.Name = "mine"	
+	mine.Parent = Frame	
+	mine.BackgroundColor3 = Color3.fromRGB(123, 255, 247)	
+	mine.Position = UDim2.new(0.231578946, 0, 0.491228074, 0)	
+	mine.Size = UDim2.new(0, 45, 0, 29)	
+	mine.Font = Enum.Font.SourceSans	
+	mine.Text = "-"	
+	mine.TextColor3 = Color3.fromRGB(0, 0, 0)	
+	mine.TextScaled = true	
+	mine.TextSize = 14.000	
+	mine.TextWrapped = true 	
+	
+	closebutton.Name = "Close"	
+	closebutton.Parent = main.Frame	
+	closebutton.BackgroundColor3 = Color3.fromRGB(225, 25, 0)	
+	closebutton.Font = "SourceSans"	
+	closebutton.Size = UDim2.new(0, 45, 0, 28)	
+	closebutton.Text = "X"	
+	closebutton.TextSize = 30	
+	closebutton.Position = UDim2.new(0, 0, -1, 27) 	
+	
+	mini.Name = "minimize"	
+	mini.Parent = main.Frame	
+	mini.BackgroundColor3 = Color3.fromRGB(192, 150, 230)	
+	mini.Font = "SourceSans"	
+	mini.Size = UDim2.new(0, 45, 0, 28)	
+	mini.Text = "-"	
+	mini.TextSize = 40	
+	mini.Position = UDim2.new(0, 44, -1, 27) 	
+	
+	mini2.Name = "minimize2"	
+	mini2.Parent = main.Frame	
+	mini2.BackgroundColor3 = Color3.fromRGB(192, 150, 230)	
+	mini2.Font = "SourceSans"	
+	mini2.Size = UDim2.new(0, 45, 0, 28)	
+	mini2.Text = "+"	
+	mini2.TextSize = 40	
+	mini2.Position = UDim2.new(0, 44, -1, 57)	
+	mini2.Visible = false 	
+	
+	speeds = 1 	
+	
+	local speaker = game:GetService("Players").LocalPlayer 	
+	
+	local chr = game.Players.LocalPlayer.Character	
+	local hum = chr and chr:FindFirstChildWhichIsA("Humanoid") 	
+	
+	nowe = false 	
+	
+	Frame.Active = true -- main = gui	
+	Frame.Draggable = true 	
+	
+	onof.MouseButton1Down:connect(function() 	
+	
+	if nowe == true then	
+	nowe = false 	
+	
+	speaker.Character.Humanoid:SetStateEnabled(Enum.HumanoidStateType.Climbing,true)	
+	speaker.Character.Humanoid:SetStateEnabled(Enum.HumanoidStateType.FallingDown,true)	
+	speaker.Character.Humanoid:SetStateEnabled(Enum.HumanoidStateType.Flying,true)	
+	speaker.Character.Humanoid:SetStateEnabled(Enum.HumanoidStateType.Freefall,true)	
+	speaker.Character.Humanoid:SetStateEnabled(Enum.HumanoidStateType.GettingUp,true)	
+	speaker.Character.Humanoid:SetStateEnabled(Enum.HumanoidStateType.Jumping,true)	
+	speaker.Character.Humanoid:SetStateEnabled(Enum.HumanoidStateType.Landed,true)	
+	speaker.Character.Humanoid:SetStateEnabled(Enum.HumanoidStateType.Physics,true)	
+	speaker.Character.Humanoid:SetStateEnabled(Enum.HumanoidStateType.PlatformStanding,true)	
+	speaker.Character.Humanoid:SetStateEnabled(Enum.HumanoidStateType.Ragdoll,true)	
+	speaker.Character.Humanoid:SetStateEnabled(Enum.HumanoidStateType.Running,true)	
+	speaker.Character.Humanoid:SetStateEnabled(Enum.HumanoidStateType.RunningNoPhysics,true)	
+	speaker.Character.Humanoid:SetStateEnabled(Enum.HumanoidStateType.Seated,true)	
+	speaker.Character.Humanoid:SetStateEnabled(Enum.HumanoidStateType.StrafingNoPhysics,true)	
+	speaker.Character.Humanoid:SetStateEnabled(Enum.HumanoidStateType.Swimming,true)	
+	speaker.Character.Humanoid:ChangeState(Enum.HumanoidStateType.RunningNoPhysics)	
+	else 	
+	nowe = true	
+	
+	
+	
+	for i = 1, speeds do	
+	spawn(function() 	
+	
+	local hb = game:GetService("RunService").Heartbeat	
+	
+	
+	tpwalking = true	
+	local chr = game.Players.LocalPlayer.Character	
+	local hum = chr and chr:FindFirstChildWhichIsA("Humanoid")	
+	while tpwalking and hb:Wait() and chr and hum and hum.Parent do	
+	if hum.MoveDirection.Magnitude > 0 then	
+	chr:TranslateBy(hum.MoveDirection)	
+	end	
+	end 	
+	
+	end)	
+	end	
+	game.Players.LocalPlayer.Character.Animate.Disabled = true	
+	local Char = game.Players.LocalPlayer.Character	
+	local Hum = Char:FindFirstChildOfClass("Humanoid") or Char:FindFirstChildOfClass("AnimationController") 	
+	
+	for i,v in next, Hum:GetPlayingAnimationTracks() do	
+	v:AdjustSpeed(0)	
+	end	
+	speaker.Character.Humanoid:SetStateEnabled(Enum.HumanoidStateType.Climbing,false)	
+	speaker.Character.Humanoid:SetStateEnabled(Enum.HumanoidStateType.FallingDown,false)	
+	speaker.Character.Humanoid:SetStateEnabled(Enum.HumanoidStateType.Flying,false)	
+	speaker.Character.Humanoid:SetStateEnabled(Enum.HumanoidStateType.Freefall,false)	
+	speaker.Character.Humanoid:SetStateEnabled(Enum.HumanoidStateType.GettingUp,false)	
+	speaker.Character.Humanoid:SetStateEnabled(Enum.HumanoidStateType.Jumping,false)	
+	speaker.Character.Humanoid:SetStateEnabled(Enum.HumanoidStateType.Landed,false)	
+	speaker.Character.Humanoid:SetStateEnabled(Enum.HumanoidStateType.Physics,false)	
+	speaker.Character.Humanoid:SetStateEnabled(Enum.HumanoidStateType.PlatformStanding,false)	
+	speaker.Character.Humanoid:SetStateEnabled(Enum.HumanoidStateType.Ragdoll,false)	
+	speaker.Character.Humanoid:SetStateEnabled(Enum.HumanoidStateType.Running,false)	
+	speaker.Character.Humanoid:SetStateEnabled(Enum.HumanoidStateType.RunningNoPhysics,false)	
+	speaker.Character.Humanoid:SetStateEnabled(Enum.HumanoidStateType.Seated,false)	
+	speaker.Character.Humanoid:SetStateEnabled(Enum.HumanoidStateType.StrafingNoPhysics,false)	
+	speaker.Character.Humanoid:SetStateEnabled(Enum.HumanoidStateType.Swimming,false)	
+	speaker.Character.Humanoid:ChangeState(Enum.HumanoidStateType.Swimming)	
+	end	
+	
+	
+	
+	
+	if game:GetService("Players").LocalPlayer.Character:FindFirstChildOfClass("Humanoid").RigType == Enum.HumanoidRigType.R6 then	
+	
+	
+	
+	local plr = game.Players.LocalPlayer	
+	local torso = plr.Character.Torso	
+	local flying = true	
+	local deb = true	
+	local ctrl = {f = 0, b = 0, l = 0, r = 0}	
+	local lastctrl = {f = 0, b = 0, l = 0, r = 0}	
+	local maxspeed = 50	
+	local speed = 0	
+	
+	
+	local bg = Instance.new("BodyGyro", torso)	
+	bg.P = 9e4	
+	bg.maxTorque = Vector3.new(9e9, 9e9, 9e9)	
+	bg.cframe = torso.CFrame	
+	local bv = Instance.new("BodyVelocity", torso)	
+	bv.velocity = Vector3.new(0,0.1,0)	
+	bv.maxForce = Vector3.new(9e9, 9e9, 9e9)	
+	if nowe == true then	
+	plr.Character.Humanoid.PlatformStand = true	
+	end	
+	while nowe == true or game:GetService("Players").LocalPlayer.Character.Humanoid.Health == 0 do	
+	game:GetService("RunService").RenderStepped:Wait() 	
+	
+	if ctrl.l + ctrl.r ~= 0 or ctrl.f + ctrl.b ~= 0 then	
+	speed = speed+.5+(speed/maxspeed)	
+	if speed > maxspeed then	
+	speed = maxspeed	
+	end	
+	elseif not (ctrl.l + ctrl.r ~= 0 or ctrl.f + ctrl.b ~= 0) and speed ~= 0 then	
+	speed = speed-1	
+	if speed < 0 then	
+	speed = 0	
+	end	
+	end	
+	if (ctrl.l + ctrl.r) ~= 0 or (ctrl.f + ctrl.b) ~= 0 then	
+	bv.velocity = ((game.Workspace.CurrentCamera.CoordinateFrame.lookVector * (ctrl.f+ctrl.b)) + ((game.Workspace.CurrentCamera.CoordinateFrame * CFrame.new(ctrl.l+ctrl.r,(ctrl.f+ctrl.b)*.2,0).p) - game.Workspace.CurrentCamera.CoordinateFrame.p))*speed	
+	lastctrl = {f = ctrl.f, b = ctrl.b, l = ctrl.l, r = ctrl.r}	
+	elseif (ctrl.l + ctrl.r) == 0 and (ctrl.f + ctrl.b) == 0 and speed ~= 0 then	
+	bv.velocity = ((game.Workspace.CurrentCamera.CoordinateFrame.lookVector * (lastctrl.f+lastctrl.b)) + ((game.Workspace.CurrentCamera.CoordinateFrame * CFrame.new(lastctrl.l+lastctrl.r,(lastctrl.f+lastctrl.b)*.2,0).p) - game.Workspace.CurrentCamera.CoordinateFrame.p))*speed	
+	else	
+	bv.velocity = Vector3.new(0,0,0)	
+	end	
+	--game.Players.LocalPlayer.Character.Animate.Disabled = true	
+	bg.cframe = game.Workspace.CurrentCamera.CoordinateFrame * CFrame.Angles(-math.rad((ctrl.f+ctrl.b)*50*speed/maxspeed),0,0)	
+	end	
+	ctrl = {f = 0, b = 0, l = 0, r = 0}	
+	lastctrl = {f = 0, b = 0, l = 0, r = 0}	
+	speed = 0	
+	bg:Destroy()	
+	bv:Destroy()	
+	plr.Character.Humanoid.PlatformStand = false	
+	game.Players.LocalPlayer.Character.Animate.Disabled = false	
+	tpwalking = false	
+	
+	
+	
+	
+	else	
+	local plr = game.Players.LocalPlayer	
+	local UpperTorso = plr.Character.UpperTorso	
+	local flying = true	
+	local deb = true	
+	local ctrl = {f = 0, b = 0, l = 0, r = 0}	
+	local lastctrl = {f = 0, b = 0, l = 0, r = 0}	
+	local maxspeed = 50	
+	local speed = 0	
+	
+	
+	local bg = Instance.new("BodyGyro", UpperTorso)	
+	bg.P = 9e4	
+	bg.maxTorque = Vector3.new(9e9, 9e9, 9e9)	
+	bg.cframe = UpperTorso.CFrame	
+	local bv = Instance.new("BodyVelocity", UpperTorso)	
+	bv.velocity = Vector3.new(0,0.1,0)	
+	bv.maxForce = Vector3.new(9e9, 9e9, 9e9)	
+	if nowe == true then	
+	plr.Character.Humanoid.PlatformStand = true	
+	end	
+	while nowe == true or game:GetService("Players").LocalPlayer.Character.Humanoid.Health == 0 do	
+	wait() 	
+	
+	if ctrl.l + ctrl.r ~= 0 or ctrl.f + ctrl.b ~= 0 then	
+	speed = speed+.5+(speed/maxspeed)	
+	if speed > maxspeed then	
+	speed = maxspeed	
+	end	
+	elseif not (ctrl.l + ctrl.r ~= 0 or ctrl.f + ctrl.b ~= 0) and speed ~= 0 then	
+	speed = speed-1	
+	if speed < 0 then	
+	speed = 0	
+	end	
+	end	
+	if (ctrl.l + ctrl.r) ~= 0 or (ctrl.f + ctrl.b) ~= 0 then	
+	bv.velocity = ((game.Workspace.CurrentCamera.CoordinateFrame.lookVector * (ctrl.f+ctrl.b)) + ((game.Workspace.CurrentCamera.CoordinateFrame * CFrame.new(ctrl.l+ctrl.r,(ctrl.f+ctrl.b)*.2,0).p) - game.Workspace.CurrentCamera.CoordinateFrame.p))*speed	
+	lastctrl = {f = ctrl.f, b = ctrl.b, l = ctrl.l, r = ctrl.r}	
+	elseif (ctrl.l + ctrl.r) == 0 and (ctrl.f + ctrl.b) == 0 and speed ~= 0 then	
+	bv.velocity = ((game.Workspace.CurrentCamera.CoordinateFrame.lookVector * (lastctrl.f+lastctrl.b)) + ((game.Workspace.CurrentCamera.CoordinateFrame * CFrame.new(lastctrl.l+lastctrl.r,(lastctrl.f+lastctrl.b)*.2,0).p) - game.Workspace.CurrentCamera.CoordinateFrame.p))*speed	
+	else	
+	bv.velocity = Vector3.new(0,0,0)	
+	end 	
+	
+	bg.cframe = game.Workspace.CurrentCamera.CoordinateFrame * CFrame.Angles(-math.rad((ctrl.f+ctrl.b)*50*speed/maxspeed),0,0)	
+	end	
+	ctrl = {f = 0, b = 0, l = 0, r = 0}	
+	lastctrl = {f = 0, b = 0, l = 0, r = 0}	
+	speed = 0	
+	bg:Destroy()	
+	bv:Destroy()	
+	plr.Character.Humanoid.PlatformStand = false	
+	game.Players.LocalPlayer.Character.Animate.Disabled = false	
+	tpwalking = false	
+	
+	
+	
+	end	
+	
+	
+	
+	
+	
+	end) 	
+	
+	local tis 	
+	
+	up.MouseButton1Down:connect(function()	
+	tis = up.MouseEnter:connect(function()	
+	while tis do	
+	wait()	
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame * CFrame.new(0,1,0)	
+	end	
+	end)	
+	end) 	
+	
+	up.MouseLeave:connect(function()	
+	if tis then	
+	tis:Disconnect()	
+	tis = nil	
+	end	
+	end) 	
+	
+	local dis 	
+	
+	down.MouseButton1Down:connect(function()	
+	dis = down.MouseEnter:connect(function()	
+	while dis do	
+	wait()	
+	game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame * CFrame.new(0,-1,0)	
+	end	
+	end)	
+	end) 	
+	
+	down.MouseLeave:connect(function()	
+	if dis then	
+	dis:Disconnect()	
+	dis = nil	
+	end	
+	end)	
+	
+	
+	game:GetService("Players").LocalPlayer.CharacterAdded:Connect(function(char)	
+	wait(0.7)	
+	game.Players.LocalPlayer.Character.Humanoid.PlatformStand = false	
+	game.Players.LocalPlayer.Character.Animate.Disabled = false 	
+	
+	end)	
+	
+	
+	plus.MouseButton1Down:connect(function()	
+	speeds = speeds + 1	
+	speed.Text = speeds	
+	if nowe == true then	
+	
+	
+	tpwalking = false	
+	for i = 1, speeds do	
+	spawn(function() 	
+	
+	local hb = game:GetService("RunService").Heartbeat	
+	
+	
+	tpwalking = true	
+	local chr = game.Players.LocalPlayer.Character	
+	local hum = chr and chr:FindFirstChildWhichIsA("Humanoid")	
+	while tpwalking and hb:Wait() and chr and hum and hum.Parent do	
+	if hum.MoveDirection.Magnitude > 0 then	
+	chr:TranslateBy(hum.MoveDirection)	
+	end	
+	end 	
+	
+	end)	
+	end	
+	end	
+	end)	
+	mine.MouseButton1Down:connect(function()	
+	if speeds == 1 then	
+	speed.Text = 'cannot be less than 1'	
+	wait(1)	
+	speed.Text = speeds	
+	else	
+	speeds = speeds - 1	
+	speed.Text = speeds	
+	if nowe == true then	
+	tpwalking = false	
+	for i = 1, speeds do	
+	spawn(function() 	
+	
+	local hb = game:GetService("RunService").Heartbeat	
+	
+	
+	tpwalking = true	
+	local chr = game.Players.LocalPlayer.Character	
+	local hum = chr and chr:FindFirstChildWhichIsA("Humanoid")	
+	while tpwalking and hb:Wait() and chr and hum and hum.Parent do	
+	if hum.MoveDirection.Magnitude > 0 then	
+	chr:TranslateBy(hum.MoveDirection)	
+	end	
+	end 	
+	
+	end)	
+	end	
+	end	
+	end	
+	end) 	
+	
+	closebutton.MouseButton1Click:Connect(function()	
+	main:Destroy()	
+	end) 	
+	
+	mini.MouseButton1Click:Connect(function()	
+	up.Visible = false	
+	down.Visible = false	
+	onof.Visible = false	
+	plus.Visible = false	
+	speed.Visible = false	
+	mine.Visible = false	
+	mini.Visible = false	
+	mini2.Visible = true	
+	main.Frame.BackgroundTransparency = 1	
+	closebutton.Position = UDim2.new(0, 0, -1, 57)	
+	end) 	
+	
+	mini2.MouseButton1Click:Connect(function()	
+	up.Visible = true	
+	down.Visible = true	
+	onof.Visible = true	
+	plus.Visible = true	
+	speed.Visible = true	
+	mine.Visible = true	
+	mini.Visible = true	
+	mini2.Visible = false	
+	main.Frame.BackgroundTransparency = 0 	
+	closebutton.Position = UDim2.new(0, 0, -1, 27)	
+	end)	
+	end)	
+end;
+task.spawn(C_20);
+
+return LMG2L["ScreenGui_1"], require;
