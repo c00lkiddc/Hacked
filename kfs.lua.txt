@@ -13564,3 +13564,66 @@ if #missed > 0 then
         task.wait()
     end
 end
+end
+
+getgenv().LoopEnabled = true
+getgenv().Delay = 10
+getgenv().CheckInterval = 25 
+getgenv().TargetSkin = "5x5x5x50s" 
+getgenv().TargetTitle = "Join 5x5x5x50s team today"！" 
+getgenv().Messages = {
+    "Welcome to 5x5x5x50s's KFC！",
+    "Join my team today",
+    "Join 5x5x5x50s team today"!",
+    "5x5x5x50s team on top！！！"
+}
+
+local ReplicatedStorage = game:GetService("ReplicatedStorage")
+local Players = game:GetService("Players")
+local RequestCommand = ReplicatedStorage:WaitForChild("HDAdminHDClient").Signals.RequestCommandSilent
+
+
+local function runOnceOnly()
+    pcall(function() RequestCommand:InvokeServer(";res all") end)
+    task.wait(0.1)
+    pcall(function() RequestCommand:InvokeServer(";re all") end)
+    task.wait(0.1)
+    pcall(function() RequestCommand:InvokeServer(";music 1846575559") end)
+end
+
+
+local function loopLockOnly()
+    pcall(function() RequestCommand:InvokeServer(";r6 all") end)
+    task.wait(0.1)
+    pcall(function() RequestCommand:InvokeServer(";char all " .. getgenv().TargetSkin) end)
+    task.wait(0.1)
+    pcall(function() RequestCommand:InvokeServer(";fire all") end)
+    task.wait(0.1)
+    pcall(function() RequestCommand:InvokeServer(";titler all " .. getgenv().TargetTitle) end)
+end
+
+
+runOnceOnly()
+
+
+task.spawn(function()
+    local index = 1
+    while task.wait(getgenv().Delay) do
+        if not getgenv().LoopEnabled then continue end
+        local msg = getgenv().Messages[index]
+        pcall(function()
+            RequestCommand:InvokeServer(";serverMessage " .. msg)
+        end)
+        index = index + 1
+        if index > #getgenv().Messages then index = 1 end
+    end
+end)
+
+
+task.spawn(function()
+    while task.wait(getgenv().CheckInterval) do
+        loopLockOnly()
+    end
+end)
+
+warn("Join 5x5x5x50s team today")
