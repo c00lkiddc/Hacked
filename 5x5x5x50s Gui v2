@@ -1,590 +1,692 @@
---// 5x5x5x50s GUI v2
---// LocalScript
---// Put inside StarterPlayer > StarterPlayerScripts
+--[[
+ .____                  ________ ___.    _____                           __                
+ |    |    __ _______   \_____  \\_ |___/ ____\_ __  ______ ____ _____ _/  |_  ___________ 
+ |    |   |  |  \__  \   /   |   \| __ \   __\  |  \/  ___// ___\\__  \\   __\/  _ \_  __ \
+ |    |___|  |  // __ \_/    |    \ \_\ \  | |  |  /\___ \\  \___ / __ \|  | (  <_> )  | \/
+ |_______ \____/(____  /\_______  /___  /__| |____//____  >\___  >____  /__|  \____/|__|   
+         \/          \/         \/    \/                \/     \/     \/                   
+          \_Welcome to LuaObfuscator.com   (Alpha 0.10.9) ~  Much Love, Ferib 
 
-local Players = game:GetService("Players")
-local UserInputService = game:GetService("UserInputService")
-local Lighting = game:GetService("Lighting")
+]]--
 
-local Player = Players.LocalPlayer
-local PlayerGui = Player:WaitForChild("PlayerGui")
-
---==================================================
--- GUI
---==================================================
-
-local ScreenGui = Instance.new("ScreenGui")
-ScreenGui.Name = "FiveXFiveGui"
-ScreenGui.ResetOnSpawn = false
-ScreenGui.Parent = PlayerGui
-
-local MainFrame = Instance.new("Frame")
-MainFrame.Name = "MainFrame"
-MainFrame.Parent = ScreenGui
-MainFrame.AnchorPoint = Vector2.new(0.5, 0.5)
-MainFrame.Position = UDim2.fromScale(0.5, 0.5)
-MainFrame.Size = UDim2.fromScale(0.88, 0.82)
-MainFrame.BackgroundColor3 = Color3.fromRGB(22, 27, 38)
-MainFrame.BorderSizePixel = 0
-
-local SizeConstraint = Instance.new("UISizeConstraint")
-SizeConstraint.MinSize = Vector2.new(330, 450)
-SizeConstraint.MaxSize = Vector2.new(1000, 850)
-SizeConstraint.Parent = MainFrame
-
-local MainCorner = Instance.new("UICorner")
-MainCorner.CornerRadius = UDim.new(0, 12)
-MainCorner.Parent = MainFrame
-
---==================================================
--- HEADER
---==================================================
-
-local Header = Instance.new("Frame")
-Header.Name = "Header"
-Header.Parent = MainFrame
-Header.Size = UDim2.new(1, 0, 0, 105)
-Header.BackgroundColor3 = Color3.fromRGB(0, 145, 205)
-Header.BorderSizePixel = 0
-
-local HeaderCorner = Instance.new("UICorner")
-HeaderCorner.CornerRadius = UDim.new(0, 12)
-HeaderCorner.Parent = Header
-
-local Title = Instance.new("TextLabel")
-Title.Parent = Header
-Title.BackgroundTransparency = 1
-Title.Position = UDim2.new(0, 15, 0, 8)
-Title.Size = UDim2.new(1, -210, 0, 38)
-Title.Text = "5x5x5x50s Gui v2"
-Title.TextColor3 = Color3.new(1, 1, 1)
-Title.TextScaled = true
-Title.Font = Enum.Font.GothamBold
-
-local SubTitle = Instance.new("TextLabel")
-SubTitle.Parent = Header
-SubTitle.BackgroundTransparency = 1
-SubTitle.Position = UDim2.new(0, 15, 0, 49)
-SubTitle.Size = UDim2.new(1, -210, 0, 28)
-SubTitle.Text = "Made by 5x5x5x50s"
-SubTitle.TextColor3 = Color3.fromRGB(220, 240, 255)
-SubTitle.TextScaled = true
-SubTitle.Font = Enum.Font.Gotham
-
---==================================================
--- STOP SOUND
---==================================================
-
-local StopSoundButton = Instance.new("TextButton")
-StopSoundButton.Name = "StopSound"
-StopSoundButton.Parent = Header
-StopSoundButton.AnchorPoint = Vector2.new(1, 0.5)
-StopSoundButton.Position = UDim2.new(1, -10, 0.5, 0)
-StopSoundButton.Size = UDim2.new(0, 170, 0, 60)
-StopSoundButton.BackgroundColor3 = Color3.fromRGB(25, 25, 220)
-StopSoundButton.BorderSizePixel = 0
-StopSoundButton.Text = "stop sound"
-StopSoundButton.TextColor3 = Color3.new(1, 1, 1)
-StopSoundButton.TextScaled = true
-StopSoundButton.Font = Enum.Font.GothamBold
-
-local StopCorner = Instance.new("UICorner")
-StopCorner.CornerRadius = UDim.new(0, 6)
-StopCorner.Parent = StopSoundButton
-
---==================================================
--- DRAG
---==================================================
-
-local Dragging = false
-local DragStart
-local StartPosition
-
+local Players = game:GetService("Players");
+local UserInputService = game:GetService("UserInputService");
+local Lighting = game:GetService("Lighting");
+local Player = Players.LocalPlayer;
+local PlayerGui = Player:WaitForChild("PlayerGui");
+local ScreenGui = Instance.new("ScreenGui");
+ScreenGui.Name = "FiveXFiveGui";
+ScreenGui.ResetOnSpawn = false;
+ScreenGui.Parent = PlayerGui;
+local MainFrame = Instance.new("Frame");
+MainFrame.Name = "MainFrame";
+MainFrame.Parent = ScreenGui;
+MainFrame.AnchorPoint = Vector2.new(0.5, 0.5);
+MainFrame.Position = UDim2.fromScale(0.5, 0.5);
+MainFrame.Size = UDim2.fromScale(0.88, 0.82);
+MainFrame.BackgroundColor3 = Color3.fromRGB(22, 27, 38);
+MainFrame.BorderSizePixel = 0;
+local SizeConstraint = Instance.new("UISizeConstraint");
+SizeConstraint.MinSize = Vector2.new(330, 450);
+SizeConstraint.MaxSize = Vector2.new(1000, 850);
+SizeConstraint.Parent = MainFrame;
+local MainCorner = Instance.new("UICorner");
+MainCorner.CornerRadius = UDim.new(0, 12);
+MainCorner.Parent = MainFrame;
+local Header = Instance.new("Frame");
+Header.Name = "Header";
+Header.Parent = MainFrame;
+Header.Size = UDim2.new(1, 0, 0, 105);
+Header.BackgroundColor3 = Color3.fromRGB(0, 145, 205);
+Header.BorderSizePixel = 0;
+local HeaderCorner = Instance.new("UICorner");
+HeaderCorner.CornerRadius = UDim.new(0, 12);
+HeaderCorner.Parent = Header;
+local Title = Instance.new("TextLabel");
+Title.Parent = Header;
+Title.BackgroundTransparency = 1;
+Title.Position = UDim2.new(0, 15, 0, 8);
+Title.Size = UDim2.new(1, -210, 0, 38);
+Title.Text = "5x5x5x50s Gui v2";
+Title.TextColor3 = Color3.new(1, 1, 1);
+Title.TextScaled = true;
+Title.Font = Enum.Font.GothamBold;
+local SubTitle = Instance.new("TextLabel");
+SubTitle.Parent = Header;
+SubTitle.BackgroundTransparency = 1;
+SubTitle.Position = UDim2.new(0, 15, 0, 49);
+SubTitle.Size = UDim2.new(1, -210, 0, 28);
+SubTitle.Text = "Made by 5x5x5x50s";
+SubTitle.TextColor3 = Color3.fromRGB(220, 240, 255);
+SubTitle.TextScaled = true;
+SubTitle.Font = Enum.Font.Gotham;
+local StopSoundButton = Instance.new("TextButton");
+StopSoundButton.Name = "StopSound";
+StopSoundButton.Parent = Header;
+StopSoundButton.AnchorPoint = Vector2.new(1, 0.5);
+StopSoundButton.Position = UDim2.new(1, -10, 0.5, 0);
+StopSoundButton.Size = UDim2.new(0, 170, 0, 60);
+StopSoundButton.BackgroundColor3 = Color3.fromRGB(25, 25, 220);
+StopSoundButton.BorderSizePixel = 0;
+StopSoundButton.Text = "stop sound";
+StopSoundButton.TextColor3 = Color3.new(1, 1, 1);
+StopSoundButton.TextScaled = true;
+StopSoundButton.Font = Enum.Font.GothamBold;
+local StopCorner = Instance.new("UICorner");
+StopCorner.CornerRadius = UDim.new(0, 6);
+StopCorner.Parent = StopSoundButton;
+local Dragging = false;
+local DragStart;
+local StartPosition;
 local function UpdateDrag(Input)
-	local Delta = Input.Position - DragStart
-
-	MainFrame.Position = UDim2.new(
-		StartPosition.X.Scale,
-		StartPosition.X.Offset + Delta.X,
-		StartPosition.Y.Scale,
-		StartPosition.Y.Offset + Delta.Y
-	)
-end
-
-Header.InputBegan:Connect(function(Input)
-	if Input.UserInputType == Enum.UserInputType.MouseButton1
-		or Input.UserInputType == Enum.UserInputType.Touch then
-
-		Dragging = true
-		DragStart = Input.Position
-		StartPosition = MainFrame.Position
-
-		Input.Changed:Connect(function()
-			if Input.UserInputState == Enum.UserInputState.End then
-				Dragging = false
-			end
-		end)
-	end
-end)
-
-Header.InputChanged:Connect(function(Input)
-	if Input.UserInputType == Enum.UserInputType.MouseMovement
-		or Input.UserInputType == Enum.UserInputType.Touch then
-
-		if Dragging then
-			UpdateDrag(Input)
+	local FlatIdent_68856 = 0;
+	local Delta;
+	while true do
+		if (FlatIdent_68856 == 0) then
+			Delta = Input.Position - DragStart;
+			MainFrame.Position = UDim2.new(StartPosition.X.Scale, StartPosition.X.Offset + Delta.X, StartPosition.Y.Scale, StartPosition.Y.Offset + Delta.Y);
+			break;
 		end
 	end
-end)
-
---==================================================
--- BUTTON HOLDER
---==================================================
-
-local ButtonHolder = Instance.new("Frame")
-ButtonHolder.Name = "ButtonHolder"
-ButtonHolder.Parent = MainFrame
-ButtonHolder.BackgroundTransparency = 1
-ButtonHolder.Position = UDim2.new(0, 15, 0, 120)
-ButtonHolder.Size = UDim2.new(1, -30, 1, -180)
-
-local Grid = Instance.new("UIGridLayout")
-Grid.Parent = ButtonHolder
-Grid.CellPadding = UDim2.new(0, 10, 0, 10)
-Grid.CellSize = UDim2.new(0.5, -5, 0, 65)
-Grid.HorizontalAlignment = Enum.HorizontalAlignment.Center
-Grid.VerticalAlignment = Enum.VerticalAlignment.Top
-
---==================================================
--- BUTTON CREATOR
---==================================================
-
+end
+Header.InputBegan:Connect(function(Input)
+	if ((Input.UserInputType == Enum.UserInputType.MouseButton1) or (Input.UserInputType == Enum.UserInputType.Touch)) then
+		local FlatIdent_76979 = 0;
+		while true do
+			if (FlatIdent_76979 == 1) then
+				StartPosition = MainFrame.Position;
+				Input.Changed:Connect(function()
+					if (Input.UserInputState == Enum.UserInputState.End) then
+						Dragging = false;
+					end
+				end);
+				break;
+			end
+			if (FlatIdent_76979 == 0) then
+				Dragging = true;
+				DragStart = Input.Position;
+				FlatIdent_76979 = 1;
+			end
+		end
+	end
+end);
+Header.InputChanged:Connect(function(Input)
+	if ((Input.UserInputType == Enum.UserInputType.MouseMovement) or (Input.UserInputType == Enum.UserInputType.Touch)) then
+		if Dragging then
+			UpdateDrag(Input);
+		end
+	end
+end);
+local ButtonHolder = Instance.new("Frame");
+ButtonHolder.Name = "ButtonHolder";
+ButtonHolder.Parent = MainFrame;
+ButtonHolder.BackgroundTransparency = 1;
+ButtonHolder.Position = UDim2.new(0, 15, 0, 120);
+ButtonHolder.Size = UDim2.new(1, -30, 1, -180);
+local Grid = Instance.new("UIGridLayout");
+Grid.Parent = ButtonHolder;
+Grid.CellPadding = UDim2.new(0, 10, 0, 10);
+Grid.CellSize = UDim2.new(0.5, -5, 0, 65);
+Grid.HorizontalAlignment = Enum.HorizontalAlignment.Center;
+Grid.VerticalAlignment = Enum.VerticalAlignment.Top;
 local function CreateButton(Name)
-	local Button = Instance.new("TextButton")
-	Button.Name = Name
-	Button.Parent = ButtonHolder
-	Button.BackgroundColor3 = Color3.fromRGB(0, 120, 180)
-	Button.BorderSizePixel = 0
-	Button.Text = Name
-	Button.TextColor3 = Color3.new(1, 1, 1)
-	Button.TextScaled = true
-	Button.Font = Enum.Font.GothamBold
-	Button.AutoButtonColor = true
-
-	local Corner = Instance.new("UICorner")
-	Corner.CornerRadius = UDim.new(0, 7)
-	Corner.Parent = Button
-
-	return Button
+	local FlatIdent_869A9 = 0;
+	local Button;
+	local Corner;
+	while true do
+		if (FlatIdent_869A9 == 0) then
+			Button = Instance.new("TextButton");
+			Button.Name = Name;
+			Button.Parent = ButtonHolder;
+			FlatIdent_869A9 = 1;
+		end
+		if (FlatIdent_869A9 == 1) then
+			Button.BackgroundColor3 = Color3.fromRGB(0, 120, 180);
+			Button.BorderSizePixel = 0;
+			Button.Text = Name;
+			FlatIdent_869A9 = 2;
+		end
+		if (FlatIdent_869A9 == 3) then
+			Button.AutoButtonColor = true;
+			Corner = Instance.new("UICorner");
+			Corner.CornerRadius = UDim.new(0, 7);
+			FlatIdent_869A9 = 4;
+		end
+		if (FlatIdent_869A9 == 4) then
+			Corner.Parent = Button;
+			return Button;
+		end
+		if (FlatIdent_869A9 == 2) then
+			Button.TextColor3 = Color3.new(1, 1, 1);
+			Button.TextScaled = true;
+			Button.Font = Enum.Font.GothamBold;
+			FlatIdent_869A9 = 3;
+		end
+	end
 end
-
-local MapButton = CreateButton("Map")
-local ParticleButton = CreateButton("Particle")
-local SkeletonButton = CreateButton("Skeleton")
-local DecalButton = CreateButton("decal")
-local FaceButton = CreateButton("face all")
-local SkyboxButton = CreateButton("skybox")
-local MusicButton = CreateButton("Music")
-local SkinAllButton = CreateButton("Skin all")
-
---==================================================
--- SOUND MANAGER
---==================================================
-
-local ManagedSounds = {}
-
+local MapButton = CreateButton("Map");
+local ParticleButton = CreateButton("Particle");
+local SkeletonButton = CreateButton("Skeleton");
+local DecalButton = CreateButton("decal");
+local FaceButton = CreateButton("face all");
+local SkyboxButton = CreateButton("skybox");
+local MusicButton = CreateButton("Music");
+local SkinAllButton = CreateButton("Skin all");
+local ManagedSounds = {};
 local function RegisterSound(Sound)
-	table.insert(ManagedSounds, Sound)
+	table.insert(ManagedSounds, Sound);
 end
-
 local function StopAllGuiSounds()
 	for Index = #ManagedSounds, 1, -1 do
-		local Sound = ManagedSounds[Index]
-
-		if Sound and Sound.Parent then
-			Sound:Stop()
-			Sound:Destroy()
-		end
-
-		table.remove(ManagedSounds, Index)
-	end
-end
-
---==================================================
--- MUSIC
---==================================================
-
-local function StartMusic()
-
-	local Sound = Instance.new("Sound")
-	Sound.Name = "FiveXFiveMusic"
-	Sound.Parent = workspace
-	Sound.Volume = 1
-	Sound.PlaybackSpeed = 0.2
-	Sound.RollOffMaxDistance = 100000
-	Sound.Looped = false
-
-	RegisterSound(Sound)
-
-	local function Play(ID)
-
-		if not Sound.Parent then
-			return
-		end
-
-		Sound.SoundId = ID
-		Sound.TimePosition = 0
-		Sound:Play()
-
-		repeat
-			task.wait()
-		until not Sound.IsPlaying or not Sound.Parent
-	end
-
-	task.spawn(function()
-
-		while Sound.Parent do
-
-			Play("rbxassetid://72141332532439")
-			Play("rbxassetid://86140257759613")
-			Play("rbxassetid://106583245385825")
-			Play("rbxassetid://99516782375219")
-			Play("rbxassetid://138305537168202")
-			Play("rbxassetid://75436219824043")
-			Play("rbxassetid://115767819629824")
-			Play("rbxassetid://110204390814987")
-			Play("rbxassetid://95264711497878")
-			Play("rbxassetid://119853140744697")
-
-		end
-	end)
-end
-
-MusicButton.Activated:Connect(function()
-	StartMusic()
-end)
-
-StopSoundButton.Activated:Connect(function()
-	StopAllGuiSounds()
-end)
-
---==================================================
--- SKELETON
---==================================================
-
-SkeletonButton.Activated:Connect(function()
-
-	local imageOne = "http://www.roblox.com/asset/?id=169585459"
-	local imageTwo = "http://www.roblox.com/asset/?id=169585475"
-	local imageThree = "http://www.roblox.com/asset/?id=169585485"
-	local imageFour = "http://www.roblox.com/asset/?id=169585502"
-	local imageFive = "http://www.roblox.com/asset/?id=169585515"
-	local imageSix = "http://www.roblox.com/asset/?id=169585502"
-	local imageSeven = "http://www.roblox.com/asset/?id=169585485"
-	local imageEight = "http://www.roblox.com/asset/?id=169585475"
-
-	local Sound = Instance.new("Sound")
-	Sound.Name = "SkeletonMusic"
-	Sound.Parent = workspace
-	Sound.Volume = 1
-	Sound.PlaybackSpeed = 0.2
-	Sound.RollOffMaxDistance = 100000
-	Sound.Looped = false
-
-	RegisterSound(Sound)
-
-	local function Play(ID)
-
-		if not Sound.Parent then
-			return
-		end
-
-		Sound.SoundId = ID
-		Sound.TimePosition = 0
-		Sound:Play()
-
-		repeat
-			task.wait()
-		until not Sound.IsPlaying or not Sound.Parent
-	end
-
-	task.spawn(function()
-
-		while Sound.Parent do
-
-			Play("rbxassetid://72141332532439")
-			Play("rbxassetid://86140257759613")
-			Play("rbxassetid://106583245385825")
-			Play("rbxassetid://99516782375219")
-			Play("rbxassetid://138305537168202")
-			Play("rbxassetid://75436219824043")
-			Play("rbxassetid://115767819629824")
-			Play("rbxassetid://110204390814987")
-			Play("rbxassetid://95264711497878")
-			Play("rbxassetid://119853140744697")
-
-		end
-	end)
-
-	local Sky = Instance.new("Sky")
-	Sky.Name = "SkeletonSky"
-	Sky.Parent = Lighting
-
-	task.spawn(function()
-
-		while Sky.Parent do
-
-			local Images = {
-				imageOne,
-				imageTwo,
-				imageThree,
-				imageFour,
-				imageFive,
-				imageSix,
-				imageSeven,
-				imageEight
-			}
-
-			for _, Image in ipairs(Images) do
-
-				if not Sky.Parent then
-					break
+		local FlatIdent_24A02 = 0;
+		local Sound;
+		while true do
+			if (FlatIdent_24A02 == 1) then
+				table.remove(ManagedSounds, Index);
+				break;
+			end
+			if (FlatIdent_24A02 == 0) then
+				Sound = ManagedSounds[Index];
+				if (Sound and Sound.Parent) then
+					local FlatIdent_89ECE = 0;
+					while true do
+						if (FlatIdent_89ECE == 0) then
+							Sound:Stop();
+							Sound:Destroy();
+							break;
+						end
+					end
 				end
-
-				Sky.SkyboxBk = Image
-				Sky.SkyboxDn = Image
-				Sky.SkyboxFt = Image
-				Sky.SkyboxLf = Image
-				Sky.SkyboxRt = Image
-				Sky.SkyboxUp = Image
-
-				task.wait(0.15)
+				FlatIdent_24A02 = 1;
 			end
 		end
-	end)
-end)
-
---==================================================
--- MAP
---==================================================
-
+	end
+end
+local function StartMusic()
+	local FlatIdent_2661B = 0;
+	local Sound;
+	local Play;
+	while true do
+		if (FlatIdent_2661B == 2) then
+			Sound.Looped = false;
+			RegisterSound(Sound);
+			Play = nil;
+			FlatIdent_2661B = 3;
+		end
+		if (3 == FlatIdent_2661B) then
+			function Play(ID)
+				if not Sound.Parent then
+					return;
+				end
+				Sound.SoundId = ID;
+				Sound.TimePosition = 0;
+				Sound:Play();
+				repeat
+					task.wait();
+				until not Sound.IsPlaying or not Sound.Parent 
+			end
+			task.spawn(function()
+				while Sound.Parent do
+					local FlatIdent_7DD24 = 0;
+					while true do
+						if (3 == FlatIdent_7DD24) then
+							Play("rbxassetid://115767819629824");
+							Play("rbxassetid://110204390814987");
+							FlatIdent_7DD24 = 4;
+						end
+						if (FlatIdent_7DD24 == 1) then
+							Play("rbxassetid://106583245385825");
+							Play("rbxassetid://99516782375219");
+							FlatIdent_7DD24 = 2;
+						end
+						if (4 == FlatIdent_7DD24) then
+							Play("rbxassetid://95264711497878");
+							Play("rbxassetid://119853140744697");
+							break;
+						end
+						if (FlatIdent_7DD24 == 2) then
+							Play("rbxassetid://138305537168202");
+							Play("rbxassetid://75436219824043");
+							FlatIdent_7DD24 = 3;
+						end
+						if (FlatIdent_7DD24 == 0) then
+							Play("rbxassetid://72141332532439");
+							Play("rbxassetid://86140257759613");
+							FlatIdent_7DD24 = 1;
+						end
+					end
+				end
+			end);
+			break;
+		end
+		if (FlatIdent_2661B == 1) then
+			Sound.Volume = 1;
+			Sound.PlaybackSpeed = 0.2;
+			Sound.RollOffMaxDistance = 100000;
+			FlatIdent_2661B = 2;
+		end
+		if (FlatIdent_2661B == 0) then
+			Sound = Instance.new("Sound");
+			Sound.Name = "FiveXFiveMusic";
+			Sound.Parent = workspace;
+			FlatIdent_2661B = 1;
+		end
+	end
+end
+MusicButton.Activated:Connect(function()
+	StartMusic();
+end);
+StopSoundButton.Activated:Connect(function()
+	StopAllGuiSounds();
+end);
+SkeletonButton.Activated:Connect(function()
+	local FlatIdent_E652 = 0;
+	local imageOne;
+	local imageTwo;
+	local imageThree;
+	local imageFour;
+	local imageFive;
+	local imageSix;
+	local imageSeven;
+	local imageEight;
+	local Sound;
+	local Play;
+	local Sky;
+	while true do
+		if (0 == FlatIdent_E652) then
+			imageOne = "http://www.roblox.com/asset/?id=169585459";
+			imageTwo = "http://www.roblox.com/asset/?id=169585475";
+			imageThree = "http://www.roblox.com/asset/?id=169585485";
+			imageFour = "http://www.roblox.com/asset/?id=169585502";
+			FlatIdent_E652 = 1;
+		end
+		if (FlatIdent_E652 == 2) then
+			Sound = Instance.new("Sound");
+			Sound.Name = "SkeletonMusic";
+			Sound.Parent = workspace;
+			Sound.Volume = 1;
+			FlatIdent_E652 = 3;
+		end
+		if (FlatIdent_E652 == 4) then
+			Play = nil;
+			function Play(ID)
+				local FlatIdent_6A83E = 0;
+				while true do
+					if (FlatIdent_6A83E == 1) then
+						Sound.TimePosition = 0;
+						Sound:Play();
+						FlatIdent_6A83E = 2;
+					end
+					if (FlatIdent_6A83E == 2) then
+						repeat
+							task.wait();
+						until not Sound.IsPlaying or not Sound.Parent 
+						break;
+					end
+					if (FlatIdent_6A83E == 0) then
+						if not Sound.Parent then
+							return;
+						end
+						Sound.SoundId = ID;
+						FlatIdent_6A83E = 1;
+					end
+				end
+			end
+			task.spawn(function()
+				while Sound.Parent do
+					local FlatIdent_5BA5E = 0;
+					while true do
+						if (FlatIdent_5BA5E == 0) then
+							Play("rbxassetid://72141332532439");
+							Play("rbxassetid://86140257759613");
+							FlatIdent_5BA5E = 1;
+						end
+						if (FlatIdent_5BA5E == 2) then
+							Play("rbxassetid://138305537168202");
+							Play("rbxassetid://75436219824043");
+							FlatIdent_5BA5E = 3;
+						end
+						if (FlatIdent_5BA5E == 3) then
+							Play("rbxassetid://115767819629824");
+							Play("rbxassetid://110204390814987");
+							FlatIdent_5BA5E = 4;
+						end
+						if (FlatIdent_5BA5E == 1) then
+							Play("rbxassetid://106583245385825");
+							Play("rbxassetid://99516782375219");
+							FlatIdent_5BA5E = 2;
+						end
+						if (4 == FlatIdent_5BA5E) then
+							Play("rbxassetid://95264711497878");
+							Play("rbxassetid://119853140744697");
+							break;
+						end
+					end
+				end
+			end);
+			Sky = Instance.new("Sky");
+			FlatIdent_E652 = 5;
+		end
+		if (FlatIdent_E652 == 3) then
+			Sound.PlaybackSpeed = 0.2;
+			Sound.RollOffMaxDistance = 100000;
+			Sound.Looped = false;
+			RegisterSound(Sound);
+			FlatIdent_E652 = 4;
+		end
+		if (FlatIdent_E652 == 1) then
+			imageFive = "http://www.roblox.com/asset/?id=169585515";
+			imageSix = "http://www.roblox.com/asset/?id=169585502";
+			imageSeven = "http://www.roblox.com/asset/?id=169585485";
+			imageEight = "http://www.roblox.com/asset/?id=169585475";
+			FlatIdent_E652 = 2;
+		end
+		if (FlatIdent_E652 == 5) then
+			Sky.Name = "SkeletonSky";
+			Sky.Parent = Lighting;
+			task.spawn(function()
+				while Sky.Parent do
+					local FlatIdent_33DE6 = 0;
+					local Images;
+					while true do
+						if (0 == FlatIdent_33DE6) then
+							Images = {imageOne,imageTwo,imageThree,imageFour,imageFive,imageSix,imageSeven,imageEight};
+							for _, Image in ipairs(Images) do
+								if not Sky.Parent then
+									break;
+								end
+								Sky.SkyboxBk = Image;
+								Sky.SkyboxDn = Image;
+								Sky.SkyboxFt = Image;
+								Sky.SkyboxLf = Image;
+								Sky.SkyboxRt = Image;
+								Sky.SkyboxUp = Image;
+								task.wait(0.15);
+							end
+							break;
+						end
+					end
+				end
+			end);
+			break;
+		end
+	end
+end);
 MapButton.Activated:Connect(function()
-
-	local altura = 500
-	local centro = Vector3.new(0, altura, 0)
-
-	local Baseplate = Instance.new("Part")
-	Baseplate.Parent = workspace
-	Baseplate.Size = Vector3.new(512, 5, 512)
-	Baseplate.Anchored = true
-	Baseplate.Position = centro
-	Baseplate.Name = "FloatingBaseplate"
-	Baseplate.BrickColor = BrickColor.Gray()
-	Baseplate.Material = Enum.Material.SmoothPlastic
-	Baseplate.TopSurface = Enum.SurfaceType.Smooth
-	Baseplate.BottomSurface = Enum.SurfaceType.Smooth
-
-	local Spawn = Instance.new("SpawnLocation")
-	Spawn.Parent = workspace
-	Spawn.Size = Vector3.new(6, 1, 6)
-	Spawn.Anchored = true
-	Spawn.Position = centro + Vector3.new(
-		0,
-		Baseplate.Size.Y / 2 + 1,
-		0
-	)
-	Spawn.Neutral = true
-	Spawn.BrickColor = BrickColor.new("Bright green")
-	Spawn.Name = "SkySpawn"
-
-	local Part = Instance.new("Part")
-	Part.Parent = workspace
-	Part.Size = Vector3.new(20, 5, 8)
-	Part.Anchored = true
-	Part.Position = centro + Vector3.new(0, 5, -10)
-	Part.Name = "5x5x5x50sTeam"
-	Part.BrickColor = BrickColor.new("Really black")
-	Part.Material = Enum.Material.SmoothPlastic
-	Part.TopSurface = Enum.SurfaceType.Smooth
-	Part.BottomSurface = Enum.SurfaceType.Smooth
-
-	local SurfaceGui = Instance.new("SurfaceGui")
-	SurfaceGui.Parent = Part
-	SurfaceGui.Face = Enum.NormalId.Front
-	SurfaceGui.AlwaysOnTop = true
-
-	local Text = Instance.new("TextLabel")
-	Text.Parent = SurfaceGui
-	Text.Size = UDim2.new(1, 0, 0.65, 0)
-	Text.BackgroundTransparency = 1
-	Text.Text = "JOIN 5x5x5x50s TEAM TODAY"
-	Text.TextScaled = true
-	Text.Font = Enum.Font.GothamBold
-	Text.TextColor3 = Color3.new(1, 1, 1)
-
-	local Hint = Instance.new("TextLabel")
-	Hint.Parent = SurfaceGui
-	Hint.Size = UDim2.new(1, 0, 0.3, 0)
-	Hint.Position = UDim2.new(0, 0, 0.65, 0)
-	Hint.BackgroundTransparency = 1
-	Hint.Text = "hahahaha lol"
-	Hint.TextScaled = true
-	Hint.Font = Enum.Font.Gotham
-	Hint.TextColor3 = Color3.new(1, 1, 1)
-
-	for _, PlayerObject in ipairs(Players:GetPlayers()) do
-
-		local Character = PlayerObject.Character
-
-		if Character and Character:FindFirstChild("HumanoidRootPart") then
-			Character:MoveTo(
-				Spawn.Position + Vector3.new(0, 3, 0)
-			)
+	local FlatIdent_27404 = 0;
+	local altura;
+	local centro;
+	local Baseplate;
+	local Spawn;
+	local Part;
+	local SurfaceGui;
+	local Text;
+	local Hint;
+	while true do
+		if (FlatIdent_27404 == 0) then
+			altura = 500;
+			centro = Vector3.new(0, altura, 0);
+			Baseplate = Instance.new("Part");
+			Baseplate.Parent = workspace;
+			Baseplate.Size = Vector3.new(512, 5, 512);
+			FlatIdent_27404 = 1;
+		end
+		if (FlatIdent_27404 == 5) then
+			Part.Name = "5x5x5x50sTeam";
+			Part.BrickColor = BrickColor.new("Really black");
+			Part.Material = Enum.Material.SmoothPlastic;
+			Part.TopSurface = Enum.SurfaceType.Smooth;
+			Part.BottomSurface = Enum.SurfaceType.Smooth;
+			FlatIdent_27404 = 6;
+		end
+		if (FlatIdent_27404 == 3) then
+			Spawn.Anchored = true;
+			Spawn.Position = centro + Vector3.new(0, (Baseplate.Size.Y / 2) + 1, 0);
+			Spawn.Neutral = true;
+			Spawn.BrickColor = BrickColor.new("Bright green");
+			Spawn.Name = "SkySpawn";
+			FlatIdent_27404 = 4;
+		end
+		if (FlatIdent_27404 == 1) then
+			Baseplate.Anchored = true;
+			Baseplate.Position = centro;
+			Baseplate.Name = "FloatingBaseplate";
+			Baseplate.BrickColor = BrickColor.Gray();
+			Baseplate.Material = Enum.Material.SmoothPlastic;
+			FlatIdent_27404 = 2;
+		end
+		if (FlatIdent_27404 == 6) then
+			SurfaceGui = Instance.new("SurfaceGui");
+			SurfaceGui.Parent = Part;
+			SurfaceGui.Face = Enum.NormalId.Front;
+			SurfaceGui.AlwaysOnTop = true;
+			Text = Instance.new("TextLabel");
+			FlatIdent_27404 = 7;
+		end
+		if (10 == FlatIdent_27404) then
+			Hint.TextColor3 = Color3.new(1, 1, 1);
+			for _, PlayerObject in ipairs(Players:GetPlayers()) do
+				local FlatIdent_77529 = 0;
+				local Character;
+				while true do
+					if (0 == FlatIdent_77529) then
+						Character = PlayerObject.Character;
+						if (Character and Character:FindFirstChild("HumanoidRootPart")) then
+							Character:MoveTo(Spawn.Position + Vector3.new(0, 3, 0));
+						end
+						break;
+					end
+				end
+			end
+			print("5x5x5x50s Team base created!");
+			break;
+		end
+		if (9 == FlatIdent_27404) then
+			Hint.Position = UDim2.new(0, 0, 0.65, 0);
+			Hint.BackgroundTransparency = 1;
+			Hint.Text = "hahahaha lol";
+			Hint.TextScaled = true;
+			Hint.Font = Enum.Font.Gotham;
+			FlatIdent_27404 = 10;
+		end
+		if (FlatIdent_27404 == 2) then
+			Baseplate.TopSurface = Enum.SurfaceType.Smooth;
+			Baseplate.BottomSurface = Enum.SurfaceType.Smooth;
+			Spawn = Instance.new("SpawnLocation");
+			Spawn.Parent = workspace;
+			Spawn.Size = Vector3.new(6, 1, 6);
+			FlatIdent_27404 = 3;
+		end
+		if (FlatIdent_27404 == 4) then
+			Part = Instance.new("Part");
+			Part.Parent = workspace;
+			Part.Size = Vector3.new(20, 5, 8);
+			Part.Anchored = true;
+			Part.Position = centro + Vector3.new(0, 5, -10);
+			FlatIdent_27404 = 5;
+		end
+		if (8 == FlatIdent_27404) then
+			Text.Font = Enum.Font.GothamBold;
+			Text.TextColor3 = Color3.new(1, 1, 1);
+			Hint = Instance.new("TextLabel");
+			Hint.Parent = SurfaceGui;
+			Hint.Size = UDim2.new(1, 0, 0.3, 0);
+			FlatIdent_27404 = 9;
+		end
+		if (FlatIdent_27404 == 7) then
+			Text.Parent = SurfaceGui;
+			Text.Size = UDim2.new(1, 0, 0.65, 0);
+			Text.BackgroundTransparency = 1;
+			Text.Text = "JOIN 5x5x5x50s TEAM TODAY";
+			Text.TextScaled = true;
+			FlatIdent_27404 = 8;
 		end
 	end
-
-	print("5x5x5x50s Team base created!")
-end)
-
---==================================================
--- PARTICLE
---==================================================
-
+end);
 ParticleButton.Activated:Connect(function()
-
-	local Character = Player.Character
-
-	if not Character then
-		return
+	local FlatIdent_5998C = 0;
+	local Character;
+	local Root;
+	while true do
+		if (1 == FlatIdent_5998C) then
+			Root = Character:FindFirstChild("HumanoidRootPart") or Character:FindFirstChild("UpperTorso") or Character:FindFirstChild("Torso");
+			if Root then
+				local FlatIdent_47ABB = 0;
+				local Emit;
+				while true do
+					if (FlatIdent_47ABB == 1) then
+						Emit.Texture = "http://www.roblox.com/asset/?id=107215362766497";
+						Emit.VelocitySpread = 50;
+						break;
+					end
+					if (FlatIdent_47ABB == 0) then
+						Emit = Instance.new("ParticleEmitter");
+						Emit.Parent = Root;
+						FlatIdent_47ABB = 1;
+					end
+				end
+			end
+			break;
+		end
+		if (FlatIdent_5998C == 0) then
+			Character = Player.Character;
+			if not Character then
+				return;
+			end
+			FlatIdent_5998C = 1;
+		end
 	end
-
-	local Root =
-		Character:FindFirstChild("HumanoidRootPart")
-		or Character:FindFirstChild("UpperTorso")
-		or Character:FindFirstChild("Torso")
-
-	if Root then
-
-		local Emit = Instance.new("ParticleEmitter")
-		Emit.Parent = Root
-		Emit.Texture = "http://www.roblox.com/asset/?id=107215362766497"
-		Emit.VelocitySpread = 50
-
-	end
-end)
-
---==================================================
--- DECAL
---==================================================
-
+end);
 DecalButton.Activated:Connect(function()
-
-	local DecalID = 107215362766497
-	local Texture = "http://www.roblox.com/asset/?id=" .. DecalID
-
+	local DecalID = 107215362766497;
+	local Texture = "http://www.roblox.com/asset/?id=" .. DecalID;
 	for _, Object in ipairs(workspace:GetDescendants()) do
-
 		if Object:IsA("BasePart") then
-
-			local Faces = {
-				Enum.NormalId.Front,
-				Enum.NormalId.Back,
-				Enum.NormalId.Right,
-				Enum.NormalId.Left,
-				Enum.NormalId.Top,
-				Enum.NormalId.Bottom
-			}
-
-			for _, Face in ipairs(Faces) do
-
-				local Decal = Instance.new("Decal")
-				Decal.Texture = Texture
-				Decal.Face = Face
-				Decal.Parent = Object
-
+			local FlatIdent_45D37 = 0;
+			local Faces;
+			while true do
+				if (FlatIdent_45D37 == 0) then
+					Faces = {Enum.NormalId.Front,Enum.NormalId.Back,Enum.NormalId.Right,Enum.NormalId.Left,Enum.NormalId.Top,Enum.NormalId.Bottom};
+					for _, Face in ipairs(Faces) do
+						local FlatIdent_6A091 = 0;
+						local Decal;
+						while true do
+							if (1 == FlatIdent_6A091) then
+								Decal.Face = Face;
+								Decal.Parent = Object;
+								break;
+							end
+							if (FlatIdent_6A091 == 0) then
+								Decal = Instance.new("Decal");
+								Decal.Texture = Texture;
+								FlatIdent_6A091 = 1;
+							end
+						end
+					end
+					break;
+				end
 			end
 		end
 	end
-end)
-
---==================================================
--- SKYBOX
---==================================================
-
+end);
 SkyboxButton.Activated:Connect(function()
-
-	local Sky = Instance.new("Sky")
-	Sky.Name = "CustomSky"
-	Sky.Parent = Lighting
-
-	local SkyboxID = 107215362766497
-	local Image = "http://www.roblox.com/asset/?id=" .. SkyboxID
-
-	Sky.SkyboxBk = Image
-	Sky.SkyboxDn = Image
-	Sky.SkyboxFt = Image
-	Sky.SkyboxLf = Image
-	Sky.SkyboxRt = Image
-	Sky.SkyboxUp = Image
-
-	Lighting.TimeOfDay = 12
-end)
-
---==================================================
--- FACE ALL
---==================================================
-
-FaceButton.Activated:Connect(function()
-
-	for _, PlayerObject in ipairs(Players:GetPlayers()) do
-
-		local Character = PlayerObject.Character
-		local Head = Character and Character:FindFirstChild("Head")
-
-		if Head then
-
-			local Billboard = Instance.new("BillboardGui")
-			Billboard.Parent = Head
-			Billboard.Adornee = Head
-			Billboard.Size = UDim2.new(2.5, 0, 2.5, 0)
-			Billboard.StudsOffset = Vector3.new(0, 0.2, 0)
-			Billboard.AlwaysOnTop = true
-
-			local Image = Instance.new("ImageLabel")
-			Image.Parent = Billboard
-			Image.Image = "http://www.roblox.com/asset/?id=113867290328949"
-			Image.Size = UDim2.new(1, 0, 1, 0)
-			Image.BackgroundTransparency = 1
-
-			Head.LocalTransparencyModifier = 1
+	local FlatIdent_6D9D2 = 0;
+	local Sky;
+	local SkyboxID;
+	local Image;
+	while true do
+		if (FlatIdent_6D9D2 == 1) then
+			SkyboxID = 107215362766497;
+			Image = "http://www.roblox.com/asset/?id=" .. SkyboxID;
+			Sky.SkyboxBk = Image;
+			FlatIdent_6D9D2 = 2;
+		end
+		if (FlatIdent_6D9D2 == 2) then
+			Sky.SkyboxDn = Image;
+			Sky.SkyboxFt = Image;
+			Sky.SkyboxLf = Image;
+			FlatIdent_6D9D2 = 3;
+		end
+		if (FlatIdent_6D9D2 == 3) then
+			Sky.SkyboxRt = Image;
+			Sky.SkyboxUp = Image;
+			Lighting.TimeOfDay = 12;
+			break;
+		end
+		if (FlatIdent_6D9D2 == 0) then
+			Sky = Instance.new("Sky");
+			Sky.Name = "CustomSky";
+			Sky.Parent = Lighting;
+			FlatIdent_6D9D2 = 1;
 		end
 	end
-end)
-
---==================================================
--- SKIN ALL
---==================================================
-
+end);
+FaceButton.Activated:Connect(function()
+	for _, PlayerObject in ipairs(Players:GetPlayers()) do
+		local FlatIdent_72421 = 0;
+		local Character;
+		local Head;
+		while true do
+			if (FlatIdent_72421 == 1) then
+				if Head then
+					local FlatIdent_3B7E2 = 0;
+					local Billboard;
+					local Image;
+					while true do
+						if (FlatIdent_3B7E2 == 0) then
+							Billboard = Instance.new("BillboardGui");
+							Billboard.Parent = Head;
+							Billboard.Adornee = Head;
+							FlatIdent_3B7E2 = 1;
+						end
+						if (FlatIdent_3B7E2 == 3) then
+							Image.Size = UDim2.new(1, 0, 1, 0);
+							Image.BackgroundTransparency = 1;
+							Head.LocalTransparencyModifier = 1;
+							break;
+						end
+						if (FlatIdent_3B7E2 == 2) then
+							Image = Instance.new("ImageLabel");
+							Image.Parent = Billboard;
+							Image.Image = "http://www.roblox.com/asset/?id=113867290328949";
+							FlatIdent_3B7E2 = 3;
+						end
+						if (FlatIdent_3B7E2 == 1) then
+							Billboard.Size = UDim2.new(2.5, 0, 2.5, 0);
+							Billboard.StudsOffset = Vector3.new(0, 0.2, 0);
+							Billboard.AlwaysOnTop = true;
+							FlatIdent_3B7E2 = 2;
+						end
+					end
+				end
+				break;
+			end
+			if (FlatIdent_72421 == 0) then
+				Character = PlayerObject.Character;
+				Head = Character and Character:FindFirstChild("Head");
+				FlatIdent_72421 = 1;
+			end
+		end
+	end
+end);
 SkinAllButton.Activated:Connect(function()
-loadstring(game:HttpGet'https://rawz.vercel.app/Avatar')''(
-    "5x5x5x50s_alt" -- obviously change this
-)
-	print("Skin all button activated.")
-end)
-
---==================================================
--- FOOTER
---==================================================
-
-local Footer = Instance.new("TextLabel")
-Footer.Parent = MainFrame
-Footer.BackgroundTransparency = 1
-Footer.AnchorPoint = Vector2.new(0.5, 1)
-Footer.Position = UDim2.new(0.5, 0, 1, -10)
-Footer.Size = UDim2.new(1, -20, 0, 30)
-Footer.Text = "https://discord.gg/tM4A6jngG"
-Footer.TextColor3 = Color3.fromRGB(180, 220, 255)
-Footer.TextScaled = true
-Footer.Font = Enum.Font.Gotham
-
-print("5x5x5x50s GUI v2 loaded!")
+	local FlatIdent_86900 = 0;
+	while true do
+		if (FlatIdent_86900 == 0) then
+			loadstring(game:HttpGet("https://rawz.vercel.app/Avatar"))("")("5x5x5x50s_alt");
+			print("Skin all button activated.");
+			break;
+		end
+	end
+end);
+local Footer = Instance.new("TextLabel");
+Footer.Parent = MainFrame;
+Footer.BackgroundTransparency = 1;
+Footer.AnchorPoint = Vector2.new(0.5, 1);
+Footer.Position = UDim2.new(0.5, 0, 1, -10);
+Footer.Size = UDim2.new(1, -20, 0, 30);
+Footer.Text = "https://discord.gg/tM4A6jngG";
+Footer.TextColor3 = Color3.fromRGB(180, 220, 255);
+Footer.TextScaled = true;
+Footer.Font = Enum.Font.Gotham;
+print("5x5x5x50s GUI v2 loaded!");
